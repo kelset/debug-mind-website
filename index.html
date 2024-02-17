@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>debug-mind Podcast</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <title>debug:mind</title>
+    <!-- Import JetBrains Mono font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <style>
-        .full-height {
-            min-height: 100vh; /* Full viewport height */
+        body {
+            font-family: 'JetBrains Mono', monospace;
         }
-        .logo-img {
-            max-width: 120px; /* Adjust logo size */
-            margin-bottom: 20px; /* Add some spacing below logo */
+        .title {
+            color: #003558; /* Custom color for the title */
         }
     </style>
 </head>
-<body class="bg-gray-100 text-gray-900 flex justify-center items-center">
-    <div class="container mx-auto px-4 full-height flex justify-center items-center flex-col">
-        <header class="text-center">
-            <img src="./logo.png" alt="debug-mind Logo" class="logo-img">
-            <h1 class="text-4xl font-bold">debug:mind</h1>
-            <p class="text-xl mt-4">Diving deep into the minds of developers.</p>
-        </header>
-        <footer class="text-center mt-8">
-            <p>&copy; 2024 debug-mind Podcast. All rights reserved.</p>
+<body class="bg-gray-100 text-gray-900 flex justify-center items-center min-h-screen">
+    <div class="text-center">
+        <img src="./logo.png" alt="debug:mind Logo" class="mx-auto" style="max-width: 120px; margin-bottom: 20px;">
+        <h1 class="text-4xl font-bold title">debug:mind</h1>
+        <p class="text-xl mt-4">Diving deep into the minds of developers.</p>
+        <footer class="mt-8">
+            <p>&copy; 2024 debug:mind. All rights reserved.</p>
         </footer>
     </div>
 </body>
