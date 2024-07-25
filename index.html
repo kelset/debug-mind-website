@@ -94,15 +94,26 @@
 
       .shorts-container img {
         position: absolute;
-        top: 50%;
+        top: 57%; /*  to better align w the Shorts logos on the other shorts */
         left: 50%;
         transform: translate(-50%, -50%);
-        max-width: 50%; /* Adjust as needed */
-        max-height: 50%; /* Adjust as needed */
       }
 
       .gradient {
         background: linear-gradient(0deg, #cae9fa 0%, #cae9fa 100%), #ebf8ff;
+      }
+
+      ul {
+        padding-left: 1.4rem !important;
+      }
+
+      ul li {
+        padding-left: 10px;
+        overflow-wrap: break-word;
+      }
+
+      ul li a {
+        text-decoration: underline;
       }
     </style>
   </head>
@@ -178,7 +189,7 @@
       </div>
     </section>
     <section class="w-full max-w-[1240px] mx-auto mt-20 max-md:mt-10">
-      <h2 class="text-4xl font-bold uppercase text-gray-900 px-4 leading-[68px] max-w-[186px] mb-6">EPISODES</h2>
+      <h2 class="text-4xl font-bold uppercase text-gray-900 px-4 leading-[68px] mb-6">EPISODES</h2>
       <div class="flex flex-row flex-wrap gap-y-12 w-full justify-between">
         <article class="flex flex-col text-base leading-7 text-gray-900 max-w-[400px]">
           <div class="video-container-small">
@@ -259,7 +270,7 @@
       </div>
     </section>
     <section class="w-full max-w-[1240px] mx-auto mt-20 max-md:mt-10">
-      <h2 class="text-4xl font-bold uppercase text-gray-900 px-4 leading-[68px] max-w-[186px] mb-6">shorts</h2>
+      <h2 class="text-4xl font-bold uppercase text-gray-900 px-4 leading-[68px] mb-6">Shorts</h2>
       <div class="flex flex-row flex-wrap gap-y-12 w-full gap-x-2">
         <article class="flex flex-col text-base leading-7 text-gray-900 max-w-[200px]">
           <div class="shorts-container rounded-lg">
@@ -352,19 +363,20 @@
       </div>
     </section>
     <section class="w-full max-w-[1240px] mx-auto mt-20 max-md:mt-10">
-      <div class="mb-8">
-        <h1 class="text-3xl font-bold">🌍 General</h1>
-        <p class="mt-2 text-gray-700">
+      <h2 class="text-4xl font-bold uppercase text-gray-900 px-4 leading-[68px] mb-6">Mental Health Resources</h2>
+      <div class="mb-8 pl-2">
+        <h2 class="text-3xl font-bold mb-6">🌍 General</h2>
+        <p class="mt-2 text-gray-700 italic">
           In this area, I’m putting general links and resources, divided by area - you don’t need to be a developer or a
           OSS maintainer to use them 🤗 if you have any suggestions for items to add to these lists, please open an
           issue or submit a PR.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 gap-x-10 pl-2">
         <div>
           <h2 class="text-xl font-semibold">📩 Newsletters</h2>
-          <ul class="list-disc list-inside mt-2">
+          <ul class="list-disc mt-2">
             <li><a href="https://www.bakadesuyo.com/" class="text-blue-500">Barking at the wrong tree</a></li>
             <li><a href="https://slowgrowth.com/" class="text-blue-500">Slow Growth</a></li>
             <li><a href="https://www.afterbabel.com/" class="text-blue-500">After Babel</a></li>
@@ -372,7 +384,7 @@
         </div>
         <div>
           <h2 class="text-xl font-semibold">📹 YouTube</h2>
-          <ul class="list-disc list-inside mt-2">
+          <ul class="list-disc mt-2">
             <li>
               <a href="https://www.youtube.com/playlist?list=PLiD6R_aXkpLgYDKrj1gkqdzL2qsKUUfUk" class="text-blue-500"
                 >YouTube playlist</a
@@ -389,7 +401,7 @@
         </div>
         <div>
           <h2 class="text-xl font-semibold">🎙 Podcasts</h2>
-          <ul class="list-disc list-inside mt-2">
+          <ul class="list-disc mt-2">
             <li>
               <a href="https://open.spotify.com/show/6VaJwyS2KXxiXqR77jqzmP" class="text-blue-500">HealthyGamerGG</a>
             </li>
@@ -414,7 +426,7 @@
         </div>
         <div>
           <h2 class="text-xl font-semibold">📚 Courses</h2>
-          <ul class="list-disc list-inside mt-2">
+          <ul class="list-disc mt-2">
             <li>
               <a href="https://coaching.healthygamer.gg/guide" class="text-blue-500">Dr. K's Guide to Mental Health</a>
             </li>
@@ -429,7 +441,7 @@
         </div>
         <div>
           <h2 class="text-xl font-semibold">⚙️ Webapps</h2>
-          <ul class="list-disc list-inside mt-2">
+          <ul class="list-disc mt-2">
             <li><a href="https://tokimeki-unfollow.glitch.me/" class="text-blue-500">Tokimeki Unfollow</a></li>
             <li><a href="https://www.proginosko.com/leechblock/" class="text-blue-500">LeechBlock</a></li>
             <li>
@@ -447,7 +459,7 @@
         </div>
         <div>
           <h2 class="text-xl font-semibold">📲 Mobile apps</h2>
-          <ul class="list-disc list-inside mt-2">
+          <ul class="list-disc mt-2">
             <li><a href="https://www.headspace.com/" class="text-blue-500">Headspace</a></li>
             <li><a href="https://ouraring.com/" class="text-blue-500">Oura Ring</a> (needs the hardware)</li>
             <li><a href="https://one-sec.app/" class="text-blue-500">one sec</a></li>
@@ -457,7 +469,7 @@
         </div>
         <div>
           <h2 class="text-xl font-semibold">📚 Books</h2>
-          <ul class="list-disc list-inside mt-2">
+          <ul class="list-disc mt-2">
             <li><a href="https://www.lizandmollie.com/book/" class="text-blue-500">No Hard Feelings</a></li>
             <li><a href="https://www.lizandmollie.com/big-feelings" class="text-blue-500">Big Feelings</a></li>
             <li>
@@ -477,7 +489,7 @@
         </div>
         <div>
           <h2 class="text-xl font-semibold">📺 TV Shows</h2>
-          <ul class="list-disc list-inside mt-2">
+          <ul class="list-disc mt-2">
             <li>
               <a
                 href="https://www.netflix.com/title/80160037?trackIdJaw=13752289&trackIdEpisode=13752289&trackIdTrailer=13752289&dpRightClick=1"
@@ -498,7 +510,7 @@
         </div>
         <div>
           <h2 class="text-xl font-semibold">🎮 Videogames</h2>
-          <ul class="list-disc list-inside mt-2">
+          <ul class="list-disc mt-2">
             <li>
               <a href="https://store.steampowered.com/app/414340/Hellblade_Senuas_Sacrifice/" class="text-blue-500"
                 >Hellblade: Senua’s Sacrifice</a
@@ -516,73 +528,67 @@
             </li>
           </ul>
         </div>
+        <div>
+          <h2 class="text-xl font-semibold">🗺 Charities and projects</h2>
+          <ul class="list-disc mt-2">
+            <li>
+              <a href="https://www.who.int/campaigns/world-mental-health-day" class="text-blue-500"
+                >World Mental Health Day</a
+              >
+            </li>
+            <li><a href="https://app.projecthealthyminds.com/" class="text-blue-500">Project Healthy Minds</a></li>
+            <li><a href="https://seizetheawkward.org/" class="text-blue-500">Seize The Awkward</a></li>
+            <li><a href="https://www.heartonmysleeve.org/" class="text-blue-500">Hearth On My Sleeve</a></li>
+            <li><a href="https://www.mentalhealthfirstaid.org/" class="text-blue-500">Mental Health First Aid</a></li>
+            <li>
+              <a href="https://www.humanetech.com/attention-mental-health" class="text-blue-500"
+                >Center for Humane Technology</a
+              >
+            </li>
+            <li><a href="https://alltechishuman.org/" class="text-blue-500">All Tech is Human</a></li>
+          </ul>
+
+          <h3 class="text-lg font-semibold mt-6">UK 🇬🇧 specific</h3>
+          <ul class="list-disc mt-2">
+            <li><a href="https://mhfaengland.org/" class="text-blue-500">Mental Health First Aid (MHFA) England</a></li>
+            <li><a href="https://www.nhs.uk/every-mind-matters/" class="text-blue-500">Every Mind Matters</a></li>
+            <li>
+              <a href="https://www.gov.uk/government/collections/public-mental-health" class="text-blue-500"
+                >Public mental health England</a
+              >
+            </li>
+            <li><a href="https://www.thecalmzone.net/" class="text-blue-500">The Calm Zone</a></li>
+            <li>
+              <a href="https://www.mentalhealth.org.uk/our-work" class="text-blue-500">Mental Health Foundation</a>
+            </li>
+            <li><a href="https://hubofhope.co.uk/" class="text-blue-500">Hub of Hope</a></li>
+            <li><a href="https://stateofmindsport.org/" class="text-blue-500">State of Mind</a></li>
+            <li><a href="https://www.samaritans.org/" class="text-blue-500">Samaritans</a></li>
+            <li><a href="https://www.papyrus-uk.org/" class="text-blue-500">Papyrus UK</a></li>
+            <li><a href="https://uksobs.org/" class="text-blue-500">Survivors of Bereavement by Suicide</a></li>
+          </ul>
+
+          <h3 class="text-lg font-semibold mt-6">USA 🇺🇸 specific</h3>
+          <ul class="list-disc mt-2">
+            <li><a href="https://www.psychologytoday.com/gb" class="text-blue-500">Psychology Today</a></li>
+            <li><a href="https://www.samhsa.gov/" class="text-blue-500">SAMHSA US</a></li>
+            <li><a href="https://aibm.org/" class="text-blue-500">American Institute for Boys and Men</a></li>
+          </ul>
+        </div>
       </div>
 
-      <div class="mt-12">
-        <h2 class="text-xl font-semibold">🗺 Charities and projects</h2>
-        <ul class="list-disc list-inside mt-2">
-          <li>
-            <a href="https://www.who.int/campaigns/world-mental-health-day" class="text-blue-500"
-              >World Mental Health Day</a
-            >
-          </li>
-          <li><a href="https://app.projecthealthyminds.com/" class="text-blue-500">Project Healthy Minds</a></li>
-          <li><a href="https://seizetheawkward.org/" class="text-blue-500">Seize The Awkward</a></li>
-          <li><a href="https://www.heartonmysleeve.org/" class="text-blue-500">Hearth On My Sleeve</a></li>
-          <li><a href="https://www.mentalhealthfirstaid.org/" class="text-blue-500">Mental Health First Aid</a></li>
-          <li>
-            <a href="https://www.humanetech.com/attention-mental-health" class="text-blue-500"
-              >Center for Humane Technology</a
-            >
-          </li>
-          <li><a href="https://alltechishuman.org/" class="text-blue-500">All Tech is Human</a></li>
-        </ul>
-
-        <h3 class="text-lg font-semibold mt-6">UK 🇬🇧 specific</h3>
-        <ul class="list-disc list-inside mt-2">
-          <li><a href="https://mhfaengland.org/" class="text-blue-500">Mental Health First Aid (MHFA) England</a></li>
-          <li><a href="https://www.nhs.uk/every-mind-matters/" class="text-blue-500">Every Mind Matters</a></li>
-          <li>
-            <a href="https://www.gov.uk/government/collections/public-mental-health" class="text-blue-500"
-              >Public mental health England</a
-            >
-          </li>
-          <li><a href="https://www.thecalmzone.net/" class="text-blue-500">The Calm Zone</a></li>
-          <li><a href="https://www.mentalhealth.org.uk/our-work" class="text-blue-500">Mental Health Foundation</a></li>
-          <li><a href="https://hubofhope.co.uk/" class="text-blue-500">Hub of Hope</a></li>
-          <li><a href="https://stateofmindsport.org/" class="text-blue-500">State of Mind</a></li>
-          <li><a href="https://www.samaritans.org/" class="text-blue-500">Samaritans</a></li>
-          <li><a href="https://www.papyrus-uk.org/" class="text-blue-500">Papyrus UK</a></li>
-          <li><a href="https://uksobs.org/" class="text-blue-500">Survivors of Bereavement by Suicide</a></li>
-        </ul>
-
-        <h3 class="text-lg font-semibold mt-6">USA 🇺🇸 specific</h3>
-        <ul class="list-disc list-inside mt-2">
-          <li><a href="https://www.psychologytoday.com/gb" class="text-blue-500">Psychology Today</a></li>
-          <li><a href="https://www.samhsa.gov/" class="text-blue-500">SAMHSA US</a></li>
-          <li><a href="https://aibm.org/" class="text-blue-500">American Institute for Boys and Men</a></li>
-        </ul>
-
-        <h3 class="text-lg font-semibold mt-6">ITA 🇮🇹 specific</h3>
-        <ul class="list-disc list-inside mt-2">
-          <li><a href="https://www.linkedin.com/company/teamdifferent/" class="text-blue-500">TeamDifferent</a></li>
-          <li><a href="https://www.unobravo.com/" class="text-blue-500">UnoBravo</a></li>
-          <li><a href="https://glipsicologionline.it/" class="text-blue-500">GliPsicologiOnline</a></li>
-        </ul>
-      </div>
-
-      <div class="mt-12">
-        <h1 class="text-3xl font-bold">💻 Work and doing Open Source</h1>
-        <p class="mt-2 text-gray-700">
+      <div class="mt-16 pl-2">
+        <h1 class="text-3xl font-bold mb-6">💻 Work and doing Open Source</h1>
+        <p class="mt-2 text-gray-700 italic">
           I’m trying to capture here a series of resources that helped me learn more about these intersections (software
           engineering + oss) and how it affects mental health.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 gap-x-10 mt-8 pl-2">
         <div>
           <h2 class="text-xl font-semibold">📖 Blogposts</h2>
-          <ul class="list-disc list-inside mt-2">
+          <ul class="list-disc mt-2">
             <li>
               <a
                 href="https://mikemcquaid.com/2018/03/19/open-source-maintainers-owe-you-nothing/"
@@ -662,7 +668,7 @@
         </div>
         <div>
           <h2 class="text-xl font-semibold">📓 Articles</h2>
-          <ul class="list-disc list-inside mt-2">
+          <ul class="list-disc mt-2">
             <li>
               <a href="https://beincrypto.com/open-source-developers-charging/" class="text-blue-500"
                 >Open Source Developers May Start Charging for Help</a
@@ -757,7 +763,7 @@
         </div>
         <div>
           <h2 class="text-xl font-semibold">📚 Books & Guides</h2>
-          <ul class="list-disc list-inside mt-2">
+          <ul class="list-disc mt-2">
             <li>
               <a href="https://www.amazon.com/dp/0578675862/" class="text-blue-500"
                 >Working in Public: The Making and Maintenance of Open Source Software</a
@@ -785,104 +791,105 @@
             </li>
           </ul>
         </div>
-      </div>
+        <div>
+          <h2 class="text-xl font-semibold">🃏 Didn’t fit in the other ones</h2>
+          <ul class="list-disc mt-2">
+            <li>
+              <a href="https://news.ycombinator.com/item?id=21661054" class="text-blue-500">Ask HN: Burning Out</a>
+            </li>
+            <li>
+              <a href="https://news.ycombinator.com/item?id=25833639" class="text-blue-500"
+                >Ask HN: Anyone else burnt out due to extended lockdown and work-from-home?</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.blog/2020-05-06-octoverse-spotlight-an-analysis-of-developer-productivity-work-cadence-and-collaboration-in-the-early-days-of-covid-19/#burnout"
+                class="text-blue-500"
+                >Octoverse 2020: spotlight on burnout</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://dev.to/devteam/the-dev-forem-team-is-taking-a-mental-health-holiday-1ldl"
+                class="text-blue-500"
+                >The DEV/Forem Team is Taking a Mental Health Holiday 💚</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.theguardian.com/society/2014/aug/15/suicide-silence-depressed-men"
+                class="text-blue-500"
+                >Suicide and silence: why depressed men are dying for somebody to talk to</a
+              >
+            </li>
+            <li>
+              <a href="https://snarky.ca/the-social-contract-of-open-source/" class="text-blue-500"
+                >The social contract of open source</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://about.gitlab.com/blog/2022/05/03/preventing-burnout-a-managers-toolkit/?utm_source=hackernewsletter&utm_medium=email&utm_term=working"
+                class="text-blue-500"
+                >Preventing burnout: A manager's toolkit</a
+              >
+            </li>
+            <li>
+              <a href="https://www.innoq.com/en/blog/wie-ich-meine-konzentration-wiederfand/" class="text-blue-500"
+                >How I regained concentration and focus</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.reddit.com/r/StreetFighter/comments/14ykjff/how_to_reduce_ranked_anxiety_using_principles/"
+                class="text-blue-500"
+                >How to reduce ranked anxiety - using principles from Cognitive Behavioural Therapy(CBT)</a
+              >
+            </li>
+            <li><a href="https://unmaintained.tech/" class="text-blue-500">No Maintenance Intended</a></li>
+          </ul>
+        </div>
 
-      <div class="mt-12">
-        <h2 class="text-xl font-semibold">🃏 Didn’t fit in the other ones</h2>
-        <ul class="list-disc list-inside mt-2">
-          <li><a href="https://news.ycombinator.com/item?id=21661054" class="text-blue-500">Ask HN: Burning Out</a></li>
-          <li>
-            <a href="https://news.ycombinator.com/item?id=25833639" class="text-blue-500"
-              >Ask HN: Anyone else burnt out due to extended lockdown and work-from-home?</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://github.blog/2020-05-06-octoverse-spotlight-an-analysis-of-developer-productivity-work-cadence-and-collaboration-in-the-early-days-of-covid-19/#burnout"
-              class="text-blue-500"
-              >Octoverse 2020: spotlight on burnout</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://dev.to/devteam/the-dev-forem-team-is-taking-a-mental-health-holiday-1ldl"
-              class="text-blue-500"
-              >The DEV/Forem Team is Taking a Mental Health Holiday 💚</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.theguardian.com/society/2014/aug/15/suicide-silence-depressed-men"
-              class="text-blue-500"
-              >Suicide and silence: why depressed men are dying for somebody to talk to</a
-            >
-          </li>
-          <li>
-            <a href="https://snarky.ca/the-social-contract-of-open-source/" class="text-blue-500"
-              >The social contract of open source</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://about.gitlab.com/blog/2022/05/03/preventing-burnout-a-managers-toolkit/?utm_source=hackernewsletter&utm_medium=email&utm_term=working"
-              class="text-blue-500"
-              >Preventing burnout: A manager's toolkit</a
-            >
-          </li>
-          <li>
-            <a href="https://www.innoq.com/en/blog/wie-ich-meine-konzentration-wiederfand/" class="text-blue-500"
-              >How I regained concentration and focus</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.reddit.com/r/StreetFighter/comments/14ykjff/how_to_reduce_ranked_anxiety_using_principles/"
-              class="text-blue-500"
-              >How to reduce ranked anxiety - using principles from Cognitive Behavioural Therapy(CBT)</a
-            >
-          </li>
-          <li><a href="https://unmaintained.tech/" class="text-blue-500">No Maintenance Intended</a></li>
-        </ul>
-      </div>
-
-      <div class="mt-12">
-        <h2 class="text-xl font-semibold">🗳️ Other collections</h2>
-        <p class="mt-2 text-gray-700">
-          ideally at some point I’d like to integrate these lists better into the rest of the page, but it’s a lot of
-          work 😅
-        </p>
-        <ul class="list-disc list-inside mt-2">
-          <li>
-            <a href="https://github.com/benstew/awesome-mental-health" class="text-blue-500"
-              >Articles: https://github.com/benstew/awesome-mental-health</a
-            >
-          </li>
-          <li>
-            <a href="https://github.com/megan201296/awesome-mental-health" class="text-blue-500"
-              >Articles, Books, Talks: https://github.com/megan201296/awesome-mental-health</a
-            >
-          </li>
-          <li>
-            <a href="https://github.com/theimpossibleastronaut/awesome-mentalhealth" class="text-blue-500"
-              >Apps, Platforms, Books, Lists, Magazines, Organizations, Treatment Options, Websites:
-              https://github.com/theimpossibleastronaut/awesome-mentalhealth</a
-            >
-          </li>
-          <li>
-            <a href="https://github.com/dreamingechoes/awesome-mental-health" class="text-blue-500"
-              >Applications, Articles, Books, Conferences, Meetups, Organizations, Podcasts, Talks:
-              https://github.com/dreamingechoes/awesome-mental-health</a
-            >
-          </li>
-          <li>
-            <a href="https://www.mentalhealthhackers.org/resources-and-links/" class="text-blue-500"
-              >Mental Health Hackers’ resources and links</a
-            >
-          </li>
-        </ul>
+        <div>
+          <h2 class="text-xl font-semibold">🗳️ Other collections</h2>
+          <p class="mt-2 text-gray-700">
+            ideally at some point I’d like to integrate these lists better into the rest of the page, but it’s a lot of
+            work 😅
+          </p>
+          <ul class="list-disc mt-2">
+            <li>
+              <a href="https://github.com/benstew/awesome-mental-health" class="text-blue-500"
+                >Articles: https://github.com/benstew/awesome-mental-health</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/megan201296/awesome-mental-health" class="text-blue-500"
+                >Articles, Books, Talks: https://github.com/megan201296/awesome-mental-health</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/theimpossibleastronaut/awesome-mentalhealth" class="text-blue-500"
+                >Apps, Platforms, Books, Lists, Magazines, Organizations, Treatment Options, Websites:
+                https://github.com/theimpossibleastronaut/awesome-mentalhealth</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/dreamingechoes/awesome-mental-health" class="text-blue-500"
+                >Applications, Articles, Books, Conferences, Meetups, Organizations, Podcasts, Talks:
+                https://github.com/dreamingechoes/awesome-mental-health</a
+              >
+            </li>
+            <li>
+              <a href="https://www.mentalhealthhackers.org/resources-and-links/" class="text-blue-500"
+                >Mental Health Hackers’ resources and links</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
-    <footer class="w-full max-w-[1240px] mx-auto mt-16">
+    <footer class="w-full max-w-[1240px] mx-auto mt-16 mb-5">
       <p>
         Hosted on
         <a href="https://github.com/kelset/debug-mind-website" target="_blank" rel="noopener noreferrer">GitHub</a>,
