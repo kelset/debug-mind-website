@@ -6,28 +6,37 @@
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <title>debug:mind</title>
     <!-- Import JetBrains Mono font from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              test: "#EBF8FF",
+              "custom-dark": "#003558",
             },
             backgroundImage: {
               attentionGradient: "linear-gradient(0deg, #CAE9FA 0%, #CAE9FA 100%)",
+            },
+            listStyleType: {
+              circle: "circle",
             },
           },
         },
       };
     </script>
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
         font-family: "JetBrains Mono", monospace;
       }
 
-      /* Good for now */
       .title {
         color: #003558; /* Custom color for the title */
       }
@@ -59,6 +68,7 @@
         padding-bottom: 56.25%; /* 16:9 aspect ratio */
         height: 0;
         overflow: hidden;
+        min-width: 200px;
         max-width: 400px;
         width: 100%;
       }
@@ -74,9 +84,10 @@
 
       .shorts-container {
         position: relative;
-        padding-bottom: 178%; /* 560/315 * 100 to maintain the aspect ratio */
+        padding-bottom: 178%; /* Maintain the aspect ratio */
         height: 0;
         overflow: hidden;
+        min-width: 150px;
         max-width: 200px;
         width: 100%;
         display: flex;
@@ -95,13 +106,53 @@
       .shorts-container img {
         position: absolute;
         top: 57%; /*  to better align w the Shorts logos on the other shorts */
-        left: 50%;
+        left: 48%;
         transform: translate(-50%, -50%);
+      }
+
+      /* Custom styles for horizontal scrolling */
+      .horizontal-scroll {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 8px;
+      }
+
+      .horizontal-scroll > * {
+        scroll-snap-align: start;
+        flex: 0 0 auto;
+        width: 160px;
       }
 
       .gradient {
         background: linear-gradient(0deg, #cae9fa 0%, #cae9fa 100%), #ebf8ff;
       }
+
+      a {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        text-decoration-color: #3b82f6 !important;
+        text-decoration-thickness: 1px !important;
+        color: #3b82f6;
+        transition: color 0.3s ease, background-color 0.3s ease;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 2px !important;
+        /* text-decoration-color: #172554 !important; */
+        text-decoration-color: #1e3a8a !important;
+        /* color: #172554; */
+        color: #1e3a8a;
+      }
+
+      a:hover h3 {
+        color: #1e3a8a;
+      }
+
+      /* a:hover div#watch-more {
+        background: #1e40af !important;
+      } */
 
       ul {
         padding-left: 1.4rem !important;
@@ -114,6 +165,7 @@
 
       ul li a {
         text-decoration: underline;
+        font-weight: 500;
       }
     </style>
   </head>
@@ -131,30 +183,43 @@
           </div>
         </div>
         <nav class="flex gap-5 justify-between my-auto font-bold whitespace-nowrap text-[14px]">
-          <a href="#" class="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <span class="hidden sm:inline">Youtube</span>
+          <a
+            href="https://www.youtube.com/playlist?list=PLiD6R_aXkpLiMfS2YrhSgtSj09JJCaP2y"
+            target="blank"
+            class="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 underline-offset-4"
+          >
+            <span class="hidden sm:inline text-blue-500 hover:text-blue-900">Youtube</span>
             <img src="/assets/images/youtube-icon.svg" alt="Youtube icon" class="block sm:hidden h-5 w-5" />
           </a>
-          <a href="#" class="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <span class="hidden sm:inline">Instagram</span>
+          <a
+            href="https://www.instagram.com/kelset.dev/"
+            target="blank"
+            class="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <span class="hidden sm:inline text-blue-500 hover:text-blue-900">Instagram</span>
             <img src="/assets/images/instagram-icon.svg" alt="Youtube icon" class="block sm:hidden h-5 w-5" />
           </a>
-          <a href="#" class="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <span class="hidden sm:inline">Tiktok</span>
+          <a href="#" target="blank" class="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <span class="hidden sm:inline text-blue-500 hover:text-blue-900">Tiktok</span>
             <img src="/assets/images/tiktok-icon.svg" alt="Youtube icon" class="block sm:hidden h-5 w-5" />
           </a>
-          <a href="#" class="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <span class="hidden sm:inline">Twitter</span>
+          <a
+            href="https://twitter.com/kelset"
+            target="blank"
+            class="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <span class="hidden sm:inline text-blue-500 hover:text-blue-900">Twitter</span>
             <img src="/assets/images/twitter-icon.svg" alt="Youtube icon" class="block sm:hidden h-5 w-5" />
           </a>
         </nav>
       </div>
       <nav class="flex gap-5 justify-between self-start font-bold text-sky-950 text-[14px] pl-4">
-        <a href="#" class="hover:underline focus:outline-none focus:ring-2 focus:ring-sky-500">🩹 First Aid</a>
-        <a href="#" class="hover:underline focus:outline-none focus:ring-2 focus:ring-sky-500">📺 Episodes</a>
-        <a href="#" class="hover:underline focus:outline-none focus:ring-2 focus:ring-sky-500">📚 Resources</a>
+        <a href="#firstaid" class="focus:outline-none focus:ring-2 text-blue-500"> <span>🩹</span> First Aid</a>
+        <a href="#episodes" class="focus:outline-none focus:ring-2 text-blue-500"><span>📺</span> Episodes</a>
+        <a href="#resources" class="focus:outline-none focus:ring-2 text-blue-500"><span>📚</span> Resources</a>
       </nav>
     </header>
+
     <section class="flex flex-col items-center py-16 max-w-[1240px] w-full mx-auto">
       <img loading="lazy" src="/logo.png" alt="Debug mind logo" class="max-w-full aspect-square w-[100px]" />
       <h2 class="sm:mt-5 text-xl sm:text-4xl leading-10 text-center text-sky-950">
@@ -176,22 +241,31 @@
         ></iframe>
       </div>
     </section>
-    <section class="text-base leading-6 text-sky-950 max-w-[1240px] w-full mx-auto">
+
+    <section class="text-base leading-6 text-sky-950 max-w-[1240px] w-full mx-auto" id="firstaid">
       <div
-        class="flex flex-row gap-2.5 items-center py-3 px-5 rounded-lg"
+        class="flex flex-row gap-3 items-center py-3 px-5 rounded-lg"
         style="background: linear-gradient(0deg, #cae9fa 0%, #cae9fa 100%), #ebf8ff"
       >
-        <img loading="lazy" src="/assets/images/emergency-icon.svg" class="" alt="Mental health resources icon" />
-        <p>
+        <!-- <img loading="lazy" src="/assets/images/emergency-icon-mid.svg" class="" alt="Mental health resources icon" /> -->
+        <span class="text-4xl self-start sm:self-auto">❤️‍🩹</span>
+        <p class="py-2.5 sm:py-0">
           If you or someone you know is struggling, these
-          <a href="#" class="font-bold underline text-sky-950">mental health resources</a> might be able to help you.
+          <a
+            href="https://explore.healthygamer.gg/mentalhealthresources"
+            target="blank"
+            class="font-medium underline text-blue-500"
+            >mental health resources</a
+          >
+          might be able to help you.
         </p>
       </div>
     </section>
-    <section class="w-full max-w-[1240px] mx-auto mt-20 max-md:mt-10">
-      <h2 class="text-4xl font-bold uppercase text-gray-900 px-4 leading-[68px] mb-6">EPISODES</h2>
-      <div class="flex flex-row flex-wrap gap-y-12 w-full justify-between">
-        <article class="flex flex-col text-base leading-7 text-gray-900 max-w-[400px]">
+
+    <section class="w-full max-w-[1240px] mx-auto mt-20" id="episodes">
+      <h2 class="text-4xl font-bold uppercase text-gray-900 px-4 leading-9 sm:leading-[68px] mb-6">EPISODES</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-14 gap-x-4">
+        <article class="flex flex-col text-base leading-7 text-gray-900 min-w-[200px] max-w-[400px] w-full">
           <div class="video-container-small">
             <iframe
               src="https://www.youtube.com/embed/OcRYIC40-jc"
@@ -210,7 +284,7 @@
             <time class="leading-9">10 days ago • 57 minutes</time>
           </header>
         </article>
-        <article class="flex flex-col text-base leading-7 text-gray-900 max-w-[400px]">
+        <article class="flex flex-col text-base leading-7 text-gray-900 min-w-[200px] max-w-[400px] w-full">
           <div class="video-container-small">
             <iframe
               src="https://www.youtube.com/embed/OcRYIC40-jc"
@@ -229,7 +303,7 @@
             <time class="leading-9">10 days ago • 57 minutes</time>
           </header>
         </article>
-        <article class="flex flex-col text-base leading-7 text-gray-900 max-w-[400px]">
+        <article class="flex flex-col text-base leading-7 text-gray-900 min-w-[200px] max-w-[400px] w-full">
           <div class="video-container-small">
             <iframe
               src="https://www.youtube.com/embed/OcRYIC40-jc"
@@ -248,7 +322,7 @@
             <time class="leading-9">10 days ago • 57 minutes</time>
           </header>
         </article>
-        <article class="flex flex-col text-base leading-7 text-gray-900 max-w-[400px]">
+        <article class="flex flex-col text-base leading-7 text-gray-900 min-w-[200px] max-w-[400px] w-full">
           <div class="video-container-small">
             <iframe
               src="https://www.youtube.com/embed/OcRYIC40-jc"
@@ -269,10 +343,11 @@
         </article>
       </div>
     </section>
-    <section class="w-full max-w-[1240px] mx-auto mt-20 max-md:mt-10">
-      <h2 class="text-4xl font-bold uppercase text-gray-900 px-4 leading-[68px] mb-6">Shorts</h2>
-      <div class="flex flex-row flex-wrap gap-y-12 w-full gap-x-2">
-        <article class="flex flex-col text-base leading-7 text-gray-900 max-w-[200px]">
+
+    <section class="w-full max-w-[1240px] mx-auto mt-20" id="shorts">
+      <h2 class="text-4xl font-bold uppercase text-gray-900 px-4 leading-9 sm:leading-[68px] mb-6">Shorts</h2>
+      <div class="hidden sm:grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-y-14 gap-x-2">
+        <article class="flex flex-col text-base leading-7 text-gray-900 w-full max-w-[200px]">
           <div class="shorts-container rounded-lg">
             <iframe
               src="https://www.youtube.com/embed/QxULyNok9xg"
@@ -288,7 +363,7 @@
             <h3 class="font-bold leading-6">What Open Source Maintainers Should Know About Mental Health</h3>
           </header>
         </article>
-        <article class="flex flex-col text-base leading-7 text-gray-900 max-w-[200px]">
+        <article class="flex flex-col text-base leading-7 text-gray-900 w-full max-w-[200px]">
           <div class="shorts-container rounded-lg">
             <iframe
               src="https://www.youtube.com/embed/QxULyNok9xg"
@@ -304,7 +379,7 @@
             <h3 class="font-bold leading-6">What Open Source Maintainers Should Know About Mental Health</h3>
           </header>
         </article>
-        <article class="flex flex-col text-base leading-7 text-gray-900 max-w-[200px]">
+        <article class="flex flex-col text-base leading-7 text-gray-900 w-full max-w-[200px]">
           <div class="shorts-container rounded-lg">
             <iframe
               src="https://www.youtube.com/embed/WGeDVmc3gtE"
@@ -320,7 +395,7 @@
             <h3 class="font-bold leading-6">What Open Source Maintainers Should Know About Mental Health</h3>
           </header>
         </article>
-        <article class="flex flex-col text-base leading-7 text-gray-900 max-w-[200px]">
+        <article class="flex flex-col text-base leading-7 text-gray-900 w-full max-w-[200px]">
           <div class="shorts-container rounded-lg">
             <iframe
               src="https://www.youtube.com/embed/QxULyNok9xg"
@@ -336,7 +411,7 @@
             <h3 class="font-bold leading-6">What Open Source Maintainers Should Know About Mental Health</h3>
           </header>
         </article>
-        <article class="flex flex-col text-base leading-7 text-gray-900 max-w-[200px]">
+        <article class="flex flex-col text-base leading-7 text-gray-900 w-full max-w-[200px]">
           <div class="shorts-container rounded-lg">
             <iframe
               src="https://www.youtube.com/embed/QxULyNok9xg"
@@ -352,18 +427,120 @@
             <h3 class="font-bold leading-6">What Open Source Maintainers Should Know About Mental Health</h3>
           </header>
         </article>
-        <article class="flex flex-col text-base leading-7 text-gray-900 w-[200px]">
-          <div class="shorts-container gradient flex justify-center items-center rounded-lg">
+        <a
+          href="https://www.youtube.com/@kelset/shorts"
+          target="_blank"
+          class="flex flex-col text-base leading-7 text-gray-900 w-full hover:underline"
+        >
+          <div id="watch-more" class="shorts-container gradient flex justify-center items-center rounded-lg">
             <img src="/assets/images/watch-on-youtube.svg" alt="Watch more on Youtube" />
           </div>
+          <div class="mt-3.5 w-full px-2">
+            <h3 class="font-bold leading-6 text-blue-500">Want more?</h3>
+          </div>
+        </a>
+      </div>
+
+      <div class="sm:hidden horizontal-scroll">
+        <article class="flex flex-col text-base leading-7 text-gray-900 w-full max-w-[160px]">
+          <div class="shorts-container rounded-lg">
+            <iframe
+              src="https://www.youtube.com/embed/QxULyNok9xg"
+              title="What Open Source Maintainers Should Know About Mental Health - YouTube short"
+              loading="lazy"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              class=""
+            ></iframe>
+          </div>
           <header class="mt-3.5 w-full px-2">
-            <h3 class="font-bold leading-6">Want more?</h3>
+            <h3 class="font-bold leading-6">What Open Source Maintainers Should Know About Mental Health</h3>
           </header>
         </article>
+        <article class="flex flex-col text-base leading-7 text-gray-900 w-full max-w-[160px]">
+          <div class="shorts-container rounded-lg">
+            <iframe
+              src="https://www.youtube.com/embed/QxULyNok9xg"
+              title="YouTube video player"
+              loading="lazy"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              class=""
+            ></iframe>
+          </div>
+          <header class="mt-3.5 w-full px-2">
+            <h3 class="font-bold leading-6">What Open Source Maintainers Should Know About Mental Health</h3>
+          </header>
+        </article>
+        <article class="flex flex-col text-base leading-7 text-gray-900 w-full max-w-[160px]">
+          <div class="shorts-container rounded-lg">
+            <iframe
+              src="https://www.youtube.com/embed/WGeDVmc3gtE"
+              title="YouTube video player"
+              loading="lazy"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              class=""
+            ></iframe>
+          </div>
+          <header class="mt-3.5 w-full px-2">
+            <h3 class="font-bold leading-6">What Open Source Maintainers Should Know About Mental Health</h3>
+          </header>
+        </article>
+        <article class="flex flex-col text-base leading-7 text-gray-900 w-full max-w-[160px]">
+          <div class="shorts-container rounded-lg">
+            <iframe
+              src="https://www.youtube.com/embed/QxULyNok9xg"
+              title="YouTube video player"
+              loading="lazy"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              class=""
+            ></iframe>
+          </div>
+          <header class="mt-3.5 w-full px-2">
+            <h3 class="font-bold leading-6">What Open Source Maintainers Should Know About Mental Health</h3>
+          </header>
+        </article>
+        <article class="flex flex-col text-base leading-7 text-gray-900 w-full max-w-[160px]">
+          <div class="shorts-container rounded-lg">
+            <iframe
+              src="https://www.youtube.com/embed/QxULyNok9xg"
+              title="YouTube video player"
+              loading="lazy"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              class=""
+            ></iframe>
+          </div>
+          <header class="mt-3.5 w-full px-2">
+            <h3 class="font-bold leading-6">What Open Source Maintainers Should Know About Mental Health</h3>
+          </header>
+        </article>
+        <a
+          href="https://www.youtube.com/@kelset/shorts"
+          target="_blank"
+          class="flex flex-col text-base leading-7 text-gray-900 w-full max-w-[160px] hover:underline"
+        >
+          <div id="watch-more" class="shorts-container gradient flex justify-center items-center rounded-lg">
+            <img src="/assets/images/watch-on-youtube.svg" alt="Watch more on Youtube" />
+          </div>
+          <div class="mt-3.5 w-full px-2">
+            <h3 class="font-bold leading-6 text-blue-500">Want more?</h3>
+          </div>
+        </a>
       </div>
     </section>
-    <section class="w-full max-w-[1240px] mx-auto mt-20 max-md:mt-10">
-      <h2 class="text-4xl font-bold uppercase text-gray-900 px-4 leading-[68px] mb-6">Mental Health Resources</h2>
+
+    <section class="w-full max-w-[1240px] mx-auto mt-20" id="resources">
+      <h2 class="text-4xl font-bold uppercase text-gray-900 px-2 sm:px-4 leading-9 sm:leading-[68px] mb-6">
+        Mental Health Resources
+      </h2>
       <div class="mb-8 pl-2">
         <h2 class="text-3xl font-bold mb-6">🌍 General</h2>
         <p class="mt-2 text-gray-700 italic">
@@ -377,25 +554,45 @@
         <div>
           <h2 class="text-xl font-semibold">📩 Newsletters</h2>
           <ul class="list-disc mt-2">
-            <li><a href="https://www.bakadesuyo.com/" class="text-blue-500">Barking at the wrong tree</a></li>
-            <li><a href="https://slowgrowth.com/" class="text-blue-500">Slow Growth</a></li>
-            <li><a href="https://www.afterbabel.com/" class="text-blue-500">After Babel</a></li>
+            <li>
+              <a href="https://www.bakadesuyo.com/" target="_blank" rel="noopener noreferrer" class="text-blue-500"
+                >Barking at the wrong tree</a
+              >
+            </li>
+            <li>
+              <a href="https://slowgrowth.com/" target="_blank" rel="noopener noreferrer" class="text-blue-500"
+                >Slow Growth</a
+              >
+            </li>
+            <li>
+              <a href="https://www.afterbabel.com/" target="_blank" rel="noopener noreferrer" class="text-blue-500"
+                >After Babel</a
+              >
+            </li>
           </ul>
         </div>
         <div>
           <h2 class="text-xl font-semibold">📹 YouTube</h2>
           <ul class="list-disc mt-2">
             <li>
-              <a href="https://www.youtube.com/playlist?list=PLiD6R_aXkpLgYDKrj1gkqdzL2qsKUUfUk" class="text-blue-500"
+              There are a lot of channels I would recommend; I’ve put them all in this
+              <a
+                href="https://www.youtube.com/playlist?list=PLiD6R_aXkpLgYDKrj1gkqdzL2qsKUUfUk"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
                 >YouTube playlist</a
-              >
+              >.
             </li>
             <li>
               <a
                 href="https://www.youtube.com/channel/UCbw5AHyRBNUFzTHCVuO5q9w?sub_confirmation=1"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-500"
                 >debug:mind</a
               >
+              is a series I make where I talk with fellow developers about mental health and its impact in our lives.
             </li>
           </ul>
         </div>
@@ -403,24 +600,71 @@
           <h2 class="text-xl font-semibold">🎙 Podcasts</h2>
           <ul class="list-disc mt-2">
             <li>
-              <a href="https://open.spotify.com/show/6VaJwyS2KXxiXqR77jqzmP" class="text-blue-500">HealthyGamerGG</a>
+              <a
+                href="https://open.spotify.com/show/6VaJwyS2KXxiXqR77jqzmP"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >HealthyGamerGG</a
+              >
             </li>
             <li>
-              <a href="https://www.earwolf.com/show/i-weigh-with-jameela-jamil/" class="text-blue-500">I Weigh</a>
+              <a
+                href="https://www.earwolf.com/show/i-weigh-with-jameela-jamil/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >I Weigh</a
+              >
             </li>
             <li>
-              <a href="https://podcasts.apple.com/us/podcast/brainfork/id1436014505" class="text-blue-500">Brainfork</a>
+              <a
+                href="https://podcasts.apple.com/us/podcast/brainfork/id1436014505"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >Brainfork</a
+              >
             </li>
             <li>
-              <a href="https://podcasts.apple.com/us/podcast/blocks-w-neal-brennan/id1658660161" class="text-blue-500"
+              <a
+                href="https://podcasts.apple.com/us/podcast/blocks-w-neal-brennan/id1658660161"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
                 >Blocks w/ Neal Brennan</a
               >
             </li>
-            <li><a href="https://www.ilpost.it/podcasts/le-basi/" class="text-blue-500">🇮🇹 LeBasi</a></li>
-            <li><a href="https://nopasanadapodcast.com/podcast/" class="text-blue-500">🇮🇹 No Pasa Nada</a></li>
             <li>
-              <a href="https://www.ilpost.it/podcasts/sigmund/" class="text-blue-500">🇮🇹 Sigmund</a> - *suggested by
-              @davidgerva*
+              🇮🇹
+              <a
+                href="https://www.ilpost.it/podcasts/le-basi/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >LeBasi</a
+              >
+            </li>
+            <li>
+              🇮🇹
+              <a
+                href="https://nopasanadapodcast.com/podcast/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >No Pasa Nada</a
+              >
+            </li>
+            <li>
+              🇮🇹
+              <a
+                href="https://www.ilpost.it/podcasts/sigmund/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >Sigmund</a
+              >
+              - *suggested by @davidgerva*
             </li>
           </ul>
         </div>
@@ -428,11 +672,19 @@
           <h2 class="text-xl font-semibold">📚 Courses</h2>
           <ul class="list-disc mt-2">
             <li>
-              <a href="https://coaching.healthygamer.gg/guide" class="text-blue-500">Dr. K's Guide to Mental Health</a>
+              <a
+                href="https://coaching.healthygamer.gg/guide"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >Dr. K's Guide to Mental Health</a
+              >
             </li>
             <li>
               <a
                 href="https://www.masterclass.com/classes/matthew-walker-teaches-the-science-of-better-sleep"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-500"
                 >Matthew Walker Teaches the Science of Better Sleep</a
               >
@@ -442,45 +694,122 @@
         <div>
           <h2 class="text-xl font-semibold">⚙️ Webapps</h2>
           <ul class="list-disc mt-2">
-            <li><a href="https://tokimeki-unfollow.glitch.me/" class="text-blue-500">Tokimeki Unfollow</a></li>
-            <li><a href="https://www.proginosko.com/leechblock/" class="text-blue-500">LeechBlock</a></li>
+            <li>
+              <a
+                href="https://tokimeki-unfollow.glitch.me/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >Tokimeki Unfollow</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.proginosko.com/leechblock/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >LeechBlock</a
+              >
+            </li>
             <li>
               <a
                 href="https://chrome.google.com/webstore/detail/calm-twitter/cknklikacoaeledfaldmhabmldkldocj"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-500"
                 >Calm Twitter</a
               >
             </li>
-            <li><a href="https://pudding.cool/2022/12/emotion-wheel/" class="text-blue-500">Emotion Wheel</a></li>
             <li>
-              <a href="https://pudding.cool/2022/12/emotion-wheel/activities/" class="text-blue-500">Activities</a>
+              <a
+                href="https://pudding.cool/2022/12/emotion-wheel/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >Emotion Wheel</a
+              >
+              <ul class="list-circle">
+                <li>
+                  <a
+                    href="https://pudding.cool/2022/12/emotion-wheel/activities/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-blue-500"
+                    >Activities</a
+                  >
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
         <div>
           <h2 class="text-xl font-semibold">📲 Mobile apps</h2>
           <ul class="list-disc mt-2">
-            <li><a href="https://www.headspace.com/" class="text-blue-500">Headspace</a></li>
-            <li><a href="https://ouraring.com/" class="text-blue-500">Oura Ring</a> (needs the hardware)</li>
-            <li><a href="https://one-sec.app/" class="text-blue-500">one sec</a></li>
-            <li><a href="https://meditofoundation.org/medito-app" class="text-blue-500">Medito</a></li>
-            <li><a href="https://www.calm.com/" class="text-blue-500">Calm</a></li>
+            <li>
+              <a href="https://www.headspace.com/" target="_blank" rel="noopener noreferrer" class="text-blue-500"
+                >Headspace</a
+              >
+            </li>
+            <li>
+              <a href="https://ouraring.com/" target="_blank" rel="noopener noreferrer" class="text-blue-500"
+                >Oura Ring</a
+              >
+              (needs the hardware)
+            </li>
+            <li>
+              <a href="https://one-sec.app/" target="_blank" rel="noopener noreferrer" class="text-blue-500">one sec</a>
+            </li>
+            <li>
+              <a
+                href="https://meditofoundation.org/medito-app"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >Medito</a
+              >
+            </li>
+            <li>
+              <a href="https://www.calm.com/" target="_blank" rel="noopener noreferrer" class="text-blue-500">Calm</a>
+            </li>
           </ul>
         </div>
         <div>
           <h2 class="text-xl font-semibold">📚 Books</h2>
           <ul class="list-disc mt-2">
-            <li><a href="https://www.lizandmollie.com/book/" class="text-blue-500">No Hard Feelings</a></li>
-            <li><a href="https://www.lizandmollie.com/big-feelings" class="text-blue-500">Big Feelings</a></li>
+            <li>
+              <a
+                href="https://www.lizandmollie.com/book/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >No Hard Feelings</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.lizandmollie.com/big-feelings"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >Big Feelings</a
+              >
+            </li>
             <li>
               <a
                 href="https://www.goodreads.com/book/show/58536046-why-has-nobody-told-me-this-before"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-500"
                 >Why Has Nobody Told Me This Before?</a
               >
             </li>
             <li>
-              <a href="https://www.goodreads.com/book/show/58782858-plays-well-with-others" class="text-blue-500"
+              <a
+                href="https://www.goodreads.com/book/show/58782858-plays-well-with-others"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
                 >Plays Well with Others: The Surprising Science Behind Why Everything You Know about Relationships Is
                 (Mostly) Wrong</a
               >
@@ -493,38 +822,88 @@
             <li>
               <a
                 href="https://www.netflix.com/title/80160037?trackIdJaw=13752289&trackIdEpisode=13752289&trackIdTrailer=13752289&dpRightClick=1"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-500"
                 >Queer Eye</a
               >
             </li>
-            <li><a href="https://www.netflix.com/watch/70298930" class="text-blue-500">Bojack Horseman</a></li>
+            <li>
+              <a
+                href="https://www.netflix.com/watch/70298930"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >Bojack Horseman</a
+              >
+            </li>
             <li>
               <a
                 href="https://www.netflix.com/title/80197526?trackIdJaw=13752289&trackIdEpisode=13752289&trackIdTrailer=13752289&dpRightClick=1"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-500"
                 >Sex Education</a
               >
             </li>
-            <li><a href="https://www.netflix.com/gb/title/81098586" class="text-blue-500">The Mind, Explained</a></li>
+            <li>
+              <a
+                href="https://www.netflix.com/gb/title/81098586"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >The Mind, Explained</a
+              >
+            </li>
           </ul>
         </div>
         <div>
           <h2 class="text-xl font-semibold">🎮 Videogames</h2>
           <ul class="list-disc mt-2">
             <li>
-              <a href="https://store.steampowered.com/app/414340/Hellblade_Senuas_Sacrifice/" class="text-blue-500"
+              <a
+                href="https://store.steampowered.com/app/414340/Hellblade_Senuas_Sacrifice/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
                 >Hellblade: Senua’s Sacrifice</a
               >
             </li>
             <li>
-              <a href="https://store.steampowered.com/app/2461850/Senuas_Saga_Hellblade_II/" class="text-blue-500"
+              <a
+                href="https://store.steampowered.com/app/2461850/Senuas_Saga_Hellblade_II/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
                 >Hellblade 2</a
               >
             </li>
-            <li><a href="https://store.steampowered.com/app/504230/Celeste/" class="text-blue-500">Celeste</a></li>
-            <li><a href="https://store.steampowered.com/app/683320/GRIS/" class="text-blue-500">Gris</a></li>
             <li>
-              <a href="https://store.steampowered.com/app/1055540/A_Short_Hike/" class="text-blue-500">A Short Hike</a>
+              <a
+                href="https://store.steampowered.com/app/504230/Celeste/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >Celeste</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://store.steampowered.com/app/683320/GRIS/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >Gris</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://store.steampowered.com/app/1055540/A_Short_Hike/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >A Short Hike</a
+              >
             </li>
           </ul>
         </div>
@@ -532,47 +911,201 @@
           <h2 class="text-xl font-semibold">🗺 Charities and projects</h2>
           <ul class="list-disc mt-2">
             <li>
-              <a href="https://www.who.int/campaigns/world-mental-health-day" class="text-blue-500"
+              <a
+                href="https://www.who.int/campaigns/world-mental-health-day"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
                 >World Mental Health Day</a
               >
             </li>
-            <li><a href="https://app.projecthealthyminds.com/" class="text-blue-500">Project Healthy Minds</a></li>
-            <li><a href="https://seizetheawkward.org/" class="text-blue-500">Seize The Awkward</a></li>
-            <li><a href="https://www.heartonmysleeve.org/" class="text-blue-500">Hearth On My Sleeve</a></li>
-            <li><a href="https://www.mentalhealthfirstaid.org/" class="text-blue-500">Mental Health First Aid</a></li>
             <li>
-              <a href="https://www.humanetech.com/attention-mental-health" class="text-blue-500"
+              <a
+                href="https://app.projecthealthyminds.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >Project Healthy Minds</a
+              >
+            </li>
+            <li>
+              <a href="https://seizetheawkward.org/" target="_blank" rel="noopener noreferrer" class="text-blue-500"
+                >Seize The Awkward</a
+              >
+            </li>
+            <li>
+              <a href="https://www.heartonmysleeve.org/" target="_blank" rel="noopener noreferrer" class="text-blue-500"
+                >Hearth On My Sleeve</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.mentalhealthfirstaid.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >Mental Health First Aid</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.humanetech.com/attention-mental-health"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
                 >Center for Humane Technology</a
               >
             </li>
-            <li><a href="https://alltechishuman.org/" class="text-blue-500">All Tech is Human</a></li>
+            <li>
+              <a href="https://alltechishuman.org/" target="_blank" rel="noopener noreferrer" class="text-blue-500"
+                >All Tech is Human</a
+              >
+            </li>
           </ul>
 
-          <h3 class="text-lg font-semibold mt-6">UK 🇬🇧 specific</h3>
+          <h3 class="text-base font-semibold mt-6">UK 🇬🇧 specific</h3>
           <ul class="list-disc mt-2">
-            <li><a href="https://mhfaengland.org/" class="text-blue-500">Mental Health First Aid (MHFA) England</a></li>
-            <li><a href="https://www.nhs.uk/every-mind-matters/" class="text-blue-500">Every Mind Matters</a></li>
             <li>
-              <a href="https://www.gov.uk/government/collections/public-mental-health" class="text-blue-500"
+              <a href="https://mhfaengland.org/" target="_blank" rel="noopener noreferrer" class="text-blue-500"
+                >Mental Health First Aid (MHFA) England</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.nhs.uk/every-mind-matters/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >Every Mind Matters</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.gov.uk/government/collections/public-mental-health"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
                 >Public mental health England</a
               >
             </li>
-            <li><a href="https://www.thecalmzone.net/" class="text-blue-500">The Calm Zone</a></li>
             <li>
-              <a href="https://www.mentalhealth.org.uk/our-work" class="text-blue-500">Mental Health Foundation</a>
+              <a href="https://www.thecalmzone.net/" target="_blank" rel="noopener noreferrer" class="text-blue-500"
+                >The Calm Zone</a
+              >
             </li>
-            <li><a href="https://hubofhope.co.uk/" class="text-blue-500">Hub of Hope</a></li>
-            <li><a href="https://stateofmindsport.org/" class="text-blue-500">State of Mind</a></li>
-            <li><a href="https://www.samaritans.org/" class="text-blue-500">Samaritans</a></li>
-            <li><a href="https://www.papyrus-uk.org/" class="text-blue-500">Papyrus UK</a></li>
-            <li><a href="https://uksobs.org/" class="text-blue-500">Survivors of Bereavement by Suicide</a></li>
+            <li>
+              <a
+                href="https://www.mentalhealth.org.uk/our-work"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >Mental Health Foundation</a
+              >
+            </li>
+            <li>
+              <a href="https://hubofhope.co.uk/" target="_blank" rel="noopener noreferrer" class="text-blue-500"
+                >Hub of Hope</a
+              >
+            </li>
+            <li>
+              <a href="https://stateofmindsport.org/" target="_blank" rel="noopener noreferrer" class="text-blue-500"
+                >State of Mind</a
+              >
+            </li>
+            <li>
+              <a href="https://www.samaritans.org/" target="_blank" rel="noopener noreferrer" class="text-blue-500"
+                >Samaritans</a
+              >
+            </li>
+            <li>
+              <a href="https://www.papyrus-uk.org/" target="_blank" rel="noopener noreferrer" class="text-blue-500"
+                >Papyrus UK</a
+              >
+            </li>
+            <li>
+              <a href="https://uksobs.org/" target="_blank" rel="noopener noreferrer" class="text-blue-500"
+                >Survivors of Bereavement by Suicide</a
+              >
+            </li>
           </ul>
 
-          <h3 class="text-lg font-semibold mt-6">USA 🇺🇸 specific</h3>
+          <h3 class="text-base font-semibold mt-6">USA 🇺🇸 specific</h3>
           <ul class="list-disc mt-2">
-            <li><a href="https://www.psychologytoday.com/gb" class="text-blue-500">Psychology Today</a></li>
-            <li><a href="https://www.samhsa.gov/" class="text-blue-500">SAMHSA US</a></li>
-            <li><a href="https://aibm.org/" class="text-blue-500">American Institute for Boys and Men</a></li>
+            <li>
+              <a
+                href="https://www.psychologytoday.com/gb"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >Psychology Today</a
+              >
+            </li>
+            <li>
+              <a href="https://www.samhsa.gov/" target="_blank" rel="noopener noreferrer" class="text-blue-500"
+                >SAMHSA US</a
+              >
+            </li>
+            <li>
+              <a href="https://aibm.org/" target="_blank" rel="noopener noreferrer" class="text-blue-500"
+                >American Institute for Boys and Men</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="text-xl font-semibold">🗂 Services and companies</h2>
+          <ul class="list-disc mt-2">
+            <li>
+              <a href="https://springhealth.com/" target="_blank" rel="noopener noreferrer" class="text-blue-500"
+                >SpringHealth</a
+              >
+            </li>
+            <li>
+              <a href="https://www.boysgetsadtoo.uk/" target="_blank" rel="noopener noreferrer" class="text-blue-500"
+                >boysgetsadtoo</a
+              >
+            </li>
+            <li>
+              <a href="https://thrive.uk.com/" target="_blank" rel="noopener noreferrer" class="text-blue-500"
+                >ThriveUK</a
+              >
+            </li>
+            <li>
+              <a href="https://www.betterhelp.com/" rel="noopener noreferrer" class="text-blue-500 line-through"
+                >BetterHelp</a
+              >
+              yeah actually don't use it,
+              <a
+                href="https://www.youtube.com/watch?v=XcTssbRvA2w"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >they're pretty bad</a
+              >.
+            </li>
+          </ul>
+
+          <h3 class="text-base font-semibold mt-6">ITA 🇮🇹 specific</h3>
+          <ul class="list-disc mt-2">
+            <li>
+              <a
+                href="https://www.linkedin.com/company/teamdifferent/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >TeamDifferent</a
+              >
+            </li>
+            <li>
+              <a href="https://www.unobravo.com/" target="_blank" rel="noopener noreferrer" class="text-blue-500"
+                >UnoBravo</a
+              >
+            </li>
+            <li>
+              <a href="https://glipsicologionline.it/" target="_blank" rel="noopener noreferrer" class="text-blue-500"
+                >GliPsicologiOnline</a
+              >
+            </li>
           </ul>
         </div>
       </div>
@@ -592,6 +1125,8 @@
             <li>
               <a
                 href="https://mikemcquaid.com/2018/03/19/open-source-maintainers-owe-you-nothing/"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-500"
                 >Open Source Maintainers Owe You Nothing</a
               >
@@ -599,68 +1134,118 @@
             <li>
               <a
                 href="https://medium.com/@kurtiskemple/im-fucking-depressed-but-it-s-going-to-be-okay-d004a1768350"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-500"
                 >I’m fucking depressed, but it’s going to be okay.</a
               >
             </li>
-            <li><a href="https://jjbeshara.com/2020/06/04/mental-wealth/" class="text-blue-500">Mental Wealth</a></li>
             <li>
-              <a href="https://www.cassie.codes/posts/reading-in-the-dark/" class="text-blue-500"
+              <a
+                href="https://jjbeshara.com/2020/06/04/mental-wealth/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >Mental Wealth</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.cassie.codes/posts/reading-in-the-dark/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
                 >Reading in the dark</a
               >
             </li>
             <li>
               <a
                 href="https://collaborativefiltering.tumblr.com/post/177594388144/burnout-and-the-developer"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-500"
                 >Burnout and the Developer</a
               >
             </li>
             <li>
-              <a href="https://localghost.dev/blog/give-yourself-a-break-lessons-from-burnout/" class="text-blue-500"
+              <a
+                href="https://localghost.dev/blog/give-yourself-a-break-lessons-from-burnout/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
                 >Give yourself a break: lessons from burnout</a
               >
             </li>
             <li>
-              <a href="https://www.jesuisundev.com/en/the-project-that-made-me-burnout/" class="text-blue-500"
+              <a
+                href="https://www.jesuisundev.com/en/the-project-that-made-me-burnout/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
                 >The project that made me burnout</a
               >
             </li>
             <li>
-              <a href="https://index.medium.com/reflections-on-burnout-bea0ebf87b9" class="text-blue-500"
+              <a
+                href="https://index.medium.com/reflections-on-burnout-bea0ebf87b9"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
                 >Reflections on Burnout</a
               >
             </li>
             <li>
-              <a href="https://archive.jlongster.com/Why-Frequently-Absent-Open-Source" class="text-blue-500"
+              <a
+                href="https://archive.jlongster.com/Why-Frequently-Absent-Open-Source"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
                 >Why I'm Frequently Absent from Open Source</a
               >
             </li>
             <li>
               <a
                 href="https://nolanlawson.com/2017/03/05/what-it-feels-like-to-be-an-open-source-maintainer/"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-500"
                 >What it feels like to be an open-source maintainer</a
               >
             </li>
             <li>
-              <a href="https://erikras.com/blog/open-source-sustainability" class="text-blue-500"
+              <a
+                href="https://erikras.com/blog/open-source-sustainability"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
                 >Open Source Sustainability</a
               >
             </li>
             <li>
               <a
                 href="https://www.reddit.com/r/rust/comments/7qels2/comment/dsqeh1d/?utm_source=share&utm_medium=web2x&context=3"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-500"
                 >I wonder, why Graydon Hoare, the author of Rust, stopped contributing into it and switched to Swift?
                 (response)</a
               >
             </li>
             <li>
-              <a href="https://antfu.me/posts/mental-health-oss" class="text-blue-500">Mental Health in Open Source</a>
+              <a
+                href="https://antfu.me/posts/mental-health-oss"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >Mental Health in Open Source</a
+              >
             </li>
             <li>
-              <a href="https://kettanaito.com/blog/the-dark-side-of-open-source" class="text-blue-500"
+              <a
+                href="https://kettanaito.com/blog/the-dark-side-of-open-source"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
                 >The Dark Side of Open Source</a
               >
             </li>
@@ -670,13 +1255,19 @@
           <h2 class="text-xl font-semibold">📓 Articles</h2>
           <ul class="list-disc mt-2">
             <li>
-              <a href="https://beincrypto.com/open-source-developers-charging/" class="text-blue-500"
+              <a
+                href="https://beincrypto.com/open-source-developers-charging/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
                 >Open Source Developers May Start Charging for Help</a
               >
             </li>
             <li>
               <a
                 href="https://www.atlassian.com/blog/productivity/work-burnout-symptoms-and-prevention"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-500"
                 >Burnout is real – here’s how to avoid it</a
               >
@@ -684,23 +1275,35 @@
             <li>
               <a
                 href="https://www.buzzfeednews.com/article/annehelenpetersen/millennials-burnout-generation-debt-work"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-500"
                 >How Millennials Became The Burnout Generation</a
               >
             </li>
             <li>
-              <a href="http://cameronmoll.com/journal/performant-mental-health" class="text-blue-500"
+              <a
+                href="http://cameronmoll.com/journal/performant-mental-health"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
                 >Performant Mental Health, The Series</a
               >
             </li>
             <li>
-              <a href="https://www.hse.ru/en/news/research/433782660.html" class="text-blue-500"
+              <a
+                href="https://www.hse.ru/en/news/research/433782660.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
                 >Workaholism Leads to Mental and Physical Health Problems: Work Addiction Risk Depends on Occupation</a
               >
             </li>
             <li>
               <a
                 href="https://www.nytimes.com/2021/04/19/well/mind/covid-mental-health-languishing.html"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-500"
                 >There’s a Name for the Blah You’re Feeling: It’s Called Languishing</a
               >
@@ -709,6 +1312,8 @@
             <li>
               <a
                 href="https://www.usehaystack.io/blog/83-of-developers-suffer-from-burnout-haystack-analytics-study-finds"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-500"
                 >83% of Developers Suffer From Burnout, Haystack Analytics Study Finds</a
               >
@@ -716,6 +1321,8 @@
             <li>
               <a
                 href="https://sloanreview.mit.edu/article/what-youre-getting-wrong-about-burnout/"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-500"
                 >What You’re Getting Wrong About Burnout</a
               >
@@ -723,6 +1330,8 @@
             <li>
               <a
                 href="https://www.newyorker.com/magazine/2021/05/24/burnout-modern-affliction-or-human-condition"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-500"
                 >Burnout: Modern Affliction or Human Condition?</a
               >
@@ -730,17 +1339,27 @@
             <li>
               <a
                 href="https://theconversation.com/finding-endless-video-calls-exhausting-youre-not-alone-137936"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-500"
                 >Finding endless video calls exhausting? You’re not alone</a
               >
             </li>
             <li>
-              <a href="https://www.nytimes.com/2020/04/01/style/productivity-coronavirus.html" class="text-blue-500"
+              <a
+                href="https://www.nytimes.com/2020/04/01/style/productivity-coronavirus.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
                 >Stop Trying to Be Productive</a
               >
             </li>
             <li>
-              <a href="https://www.nytimes.com/2020/08/13/health/Covid-mental-health-anxiety.html" class="text-blue-500"
+              <a
+                href="https://www.nytimes.com/2020/08/13/health/Covid-mental-health-anxiety.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
                 >Young Adults Report Rising Levels of Anxiety and Depression in Pandemic</a
               >
               (paywall alert)
@@ -748,6 +1367,8 @@
             <li>
               <a
                 href="https://hbswk.hbs.edu/item/the-hidden-benefit-of-giving-back-to-open-source-software"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-500"
                 >The Hidden Benefit of Giving Back to Open Source Software</a
               >
@@ -755,6 +1376,8 @@
             <li>
               <a
                 href="https://www.infoworld.com/article/3570483/open-source-has-a-people-problem.html"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-500"
                 >Open source has a people problem</a
               >
@@ -765,27 +1388,47 @@
           <h2 class="text-xl font-semibold">📚 Books & Guides</h2>
           <ul class="list-disc mt-2">
             <li>
-              <a href="https://www.amazon.com/dp/0578675862/" class="text-blue-500"
+              <a
+                href="https://www.amazon.com/dp/0578675862/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
                 >Working in Public: The Making and Maintenance of Open Source Software</a
               >
             </li>
             <li>
               <a
                 href="https://www.fordfoundation.org/work/learning/research-reports/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-500"
                 >Roads and Bridges: The Unseen Labor Behind Our Digital Infrastructure</a
               >
             </li>
             <li>
-              <a href="http://catb.org/~esr/writings/cathedral-bazaar/" class="text-blue-500"
+              <a
+                href="http://catb.org/~esr/writings/cathedral-bazaar/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
                 >The Cathedral and the Bazaar</a
               >
             </li>
             <li>
-              <a href="https://increment.com/open-source/" class="text-blue-500">Increment - Issue #9: Open Source</a>
+              <a
+                href="https://increment.com/open-source/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >Increment - Issue #9: Open Source</a
+              >
             </li>
             <li>
-              <a href="https://opensource.guide/maintaining-balance-for-open-source-maintainers/" class="text-blue-500"
+              <a
+                href="https://opensource.guide/maintaining-balance-for-open-source-maintainers/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
                 >Maintaining Balance for Open Source Maintainers - GitHub</a
               >
             </li>
@@ -795,16 +1438,28 @@
           <h2 class="text-xl font-semibold">🃏 Didn’t fit in the other ones</h2>
           <ul class="list-disc mt-2">
             <li>
-              <a href="https://news.ycombinator.com/item?id=21661054" class="text-blue-500">Ask HN: Burning Out</a>
+              <a
+                href="https://news.ycombinator.com/item?id=21661054"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >Ask HN: Burning Out</a
+              >
             </li>
             <li>
-              <a href="https://news.ycombinator.com/item?id=25833639" class="text-blue-500"
+              <a
+                href="https://news.ycombinator.com/item?id=25833639"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
                 >Ask HN: Anyone else burnt out due to extended lockdown and work-from-home?</a
               >
             </li>
             <li>
               <a
                 href="https://github.blog/2020-05-06-octoverse-spotlight-an-analysis-of-developer-productivity-work-cadence-and-collaboration-in-the-early-days-of-covid-19/#burnout"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-500"
                 >Octoverse 2020: spotlight on burnout</a
               >
@@ -812,6 +1467,8 @@
             <li>
               <a
                 href="https://dev.to/devteam/the-dev-forem-team-is-taking-a-mental-health-holiday-1ldl"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-500"
                 >The DEV/Forem Team is Taking a Mental Health Holiday 💚</a
               >
@@ -819,35 +1476,53 @@
             <li>
               <a
                 href="https://www.theguardian.com/society/2014/aug/15/suicide-silence-depressed-men"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-500"
                 >Suicide and silence: why depressed men are dying for somebody to talk to</a
               >
             </li>
             <li>
-              <a href="https://snarky.ca/the-social-contract-of-open-source/" class="text-blue-500"
+              <a
+                href="https://snarky.ca/the-social-contract-of-open-source/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
                 >The social contract of open source</a
               >
             </li>
             <li>
               <a
                 href="https://about.gitlab.com/blog/2022/05/03/preventing-burnout-a-managers-toolkit/?utm_source=hackernewsletter&utm_medium=email&utm_term=working"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-500"
                 >Preventing burnout: A manager's toolkit</a
               >
             </li>
             <li>
-              <a href="https://www.innoq.com/en/blog/wie-ich-meine-konzentration-wiederfand/" class="text-blue-500"
+              <a
+                href="https://www.innoq.com/en/blog/wie-ich-meine-konzentration-wiederfand/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
                 >How I regained concentration and focus</a
               >
             </li>
             <li>
               <a
                 href="https://www.reddit.com/r/StreetFighter/comments/14ykjff/how_to_reduce_ranked_anxiety_using_principles/"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-blue-500"
                 >How to reduce ranked anxiety - using principles from Cognitive Behavioural Therapy(CBT)</a
               >
             </li>
-            <li><a href="https://unmaintained.tech/" class="text-blue-500">No Maintenance Intended</a></li>
+            <li>
+              <a href="https://unmaintained.tech/" target="_blank" rel="noopener noreferrer" class="text-blue-500"
+                >No Maintenance Intended</a
+              >
+            </li>
           </ul>
         </div>
 
@@ -859,30 +1534,55 @@
           </p>
           <ul class="list-disc mt-2">
             <li>
-              <a href="https://github.com/benstew/awesome-mental-health" class="text-blue-500"
-                >Articles: https://github.com/benstew/awesome-mental-health</a
+              Articles:
+              <a
+                href="https://github.com/benstew/awesome-mental-health"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >https://github.com/benstew/awesome-mental-health</a
               >
             </li>
             <li>
-              <a href="https://github.com/megan201296/awesome-mental-health" class="text-blue-500"
-                >Articles, Books, Talks: https://github.com/megan201296/awesome-mental-health</a
+              Articles, Books, Talks:
+              <a
+                href="https://github.com/megan201296/awesome-mental-health"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >https://github.com/megan201296/awesome-mental-health</a
               >
             </li>
             <li>
-              <a href="https://github.com/theimpossibleastronaut/awesome-mentalhealth" class="text-blue-500"
-                >Apps, Platforms, Books, Lists, Magazines, Organizations, Treatment Options, Websites:
+              Apps, Platforms, Books, Lists, Magazines, Organizations, Treatment Options, Websites:
+              <a
+                href="https://github.com/theimpossibleastronaut/awesome-mentalhealth"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+              >
                 https://github.com/theimpossibleastronaut/awesome-mentalhealth</a
               >
             </li>
             <li>
-              <a href="https://github.com/dreamingechoes/awesome-mental-health" class="text-blue-500"
-                >Applications, Articles, Books, Conferences, Meetups, Organizations, Podcasts, Talks:
+              Applications, Articles, Books, Conferences, Meetups, Organizations, Podcasts, Talks:
+              <a
+                href="https://github.com/dreamingechoes/awesome-mental-health"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+              >
                 https://github.com/dreamingechoes/awesome-mental-health</a
               >
             </li>
             <li>
-              <a href="https://www.mentalhealthhackers.org/resources-and-links/" class="text-blue-500"
-                >Mental Health Hackers’ resources and links</a
+              Mental Health Hackers’
+              <a
+                href="https://www.mentalhealthhackers.org/resources-and-links/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500"
+                >resources and links</a
               >
             </li>
           </ul>
@@ -892,9 +1592,19 @@
     <footer class="w-full max-w-[1240px] mx-auto mt-16 mb-5">
       <p>
         Hosted on
-        <a href="https://github.com/kelset/debug-mind-website" target="_blank" rel="noopener noreferrer">GitHub</a>,
-        deployed with <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer">Netlify</a>. &copy;
-        2024 debug:mind. All rights reserved. <br />
+        <a
+          href="https://github.com/kelset/debug-mind-website"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-medium text-blue-500"
+          >GitHub</a
+        >, deployed with
+        <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer" class="font-medium text-blue-500"
+          >Netlify</a
+        >. &copy; 2024 debug:mind. All rights reserved. Designed & built by
+        <a href="https://adamridovics.com" target="_blank" rel="noopener noreferrer" class="font-medium text-blue-500"
+          >Adam Ridovics</a
+        >.
       </p>
     </footer>
   </body>
