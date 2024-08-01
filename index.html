@@ -78,7 +78,7 @@
         height: 0;
         overflow: hidden;
         min-width: 200px;
-        max-width: 400px;
+        max-width: 600px;
         width: 100%;
       }
 
@@ -186,8 +186,8 @@
   </head>
   <body class="text-gray-900 flex flex-col min-h-screen py-2.5 px-2.5 sm:px-5 relative overflow-x-clip">
     <!-- BG Illustration -->
-    <div class="absolute inset-0 flex items-center justify-center z-[-3]">
-      <pre class="whitespace-pre font-mono leading-4 text-illustration-bg">
+    <div class="absolute inset-0 flex justify-center z-[-3]">
+      <pre class="whitespace-pre font-mono text-illustration-bg text-xs leading-3 md:text-base md:leading-4">
                                                                                                                                                                                       .                                                                                                                             .                                                                                           
                                                                                                                                                                                                                                                                                                                                                                                                                 
                                                                                                                                                                                     .                                                                                                                                                                                                                           
@@ -452,10 +452,8 @@
     <header class="flex flex-col justify-center text-base leading-7 w-full max-w-[1240px] mx-auto gap-2.5">
       <div class="flex gap-x-5 gap-y-2.5 pr-2 text-gray-900 bg-blue-50 rounded-lg max-md:flex-wrap max-md:pr-5">
         <div class="flex gap-3.5">
-          <div
-            class="flex justify-center overflow-hidden relative flex-col px-4 py-1 aspect-[4.09] w-[139px] max-md:pr-5"
-          >
-            <img src="/assets/images/follow-bg.svg" class="object-cover absolute inset-0 size-full" alt="" />
+          <div class="flex justify-center overflow-hidden relative flex-col px-4 py-1 w-[130px] max-md:pr-5">
+            <img src="/assets/images/follow-bg-32.svg" class="absolute inset-0 size-full" alt="" />
             <span class="relative z-10 text-[14px]">follow on:</span>
           </div>
         </div>
@@ -500,8 +498,8 @@
     <main>
       <section class="flex flex-col items-center py-16 max-w-[1240px] w-full mx-auto relative">
         <!-- Illustration -->
-        <div class="absolute top-[-1px] right-[-394px] z-[-2]">
-          <pre class="whitespace-pre font-mono leading-4 text-illustration-green">
+        <div class="absolute top-[-1px] right-[-194px] sm:right-[-194px] z-[-2]">
+          <pre class="whitespace-pre font-mono text-illustration-green text-xs leading-3 md:text-base md:leading-4">
                                                                                                     
                                          ##**+++++++===-=*########***+=====                         
                                    %%#++++++**+==*##########*=*#############****                    
@@ -554,16 +552,15 @@
         </div>
 
         <img loading="lazy" src="/logo.png" alt="Debug mind logo" class="max-w-full aspect-square w-[100px]" />
-        <h2 class="sm:mt-5 text-xl sm:text-4xl leading-10 text-center text-sky-950">
+        <h2 class="sm:mt-5 text-xl sm:text-4xl leading-10 text-center text-sky-950 bg-white px-1">
           debug:<span class="font-extrabold">mind</span>
         </h2>
         <h1
-          class="mt-11 text-4xl sm:text-6xl font-extrabold text-gray-900 text-center sm:text-left sm:leading-[68px] w-[736px] max-md:mt-10 max-md:max-w-full"
+          class="mt-11 text-2xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 text-center sm:text-left leading-[30px] sm:leading-[60px] md:leading-[78px] sm:w-[600px] md:w-[736px] max-md:mt-10 max-md:max-w-full"
         >
-          <span class="inline-block bg-white px-2">Diving deep into the</span><br /><span
-            class="inline-block bg-white px-2"
-            >minds of developers</span
-          >
+          <!-- Diving deep into the minds of developers -->
+          <span class="inline bg-white px-2">Diving deep into the</span><br />
+          <span class="inline bg-white px-2">minds of developers</span>
         </h1>
         <div class="video-container mt-20 max-md:mt-10 border-[10px] border-white">
           <iframe
@@ -602,10 +599,12 @@
       </section>
 
       <!-- Episodes -->
-      <section class="w-full max-w-[1240px] mx-auto mt-[220px] min-[856px]:mt-[140px] relative" id="episodes">
+      <section class="w-full max-w-[1240px] mx-auto mt-[420px] min-[856px]:mt-[140px] relative" id="episodes">
         <!-- Illustration -->
-        <div class="absolute top-[-160px] left-[-570px] z-[-2]">
-          <pre class="whitespace-pre font-mono leading-4 text-illustration-green">
+        <div
+          class="absolute top-[-460px] lg:top-[-360px] left-[-100px] sm:left-[-100px] min-[856px]:left-[-170px] lg:left-[-270px] xl:left-[-470px] z-[-2]"
+        >
+          <pre class="whitespace-pre font-mono text-illustration-green text-xs leading-3 md:text-base md:leading-4">
                             +-..:@@@#--++                             
                         *:  :-----:*@@-    @*-                        
                     ++  .:--======----::..   .#-                      
@@ -649,17 +648,30 @@
         </div>
 
         <!-- Section header ASCII text -->
-        <div class="absolute top-[-38px] right-[0] z-[-1] w-full flex">
-          <div class="absolute bottom-[14px] right-[0] max-w-[1240px] w-full overflow-hidden z-[-2]">
+        <div class="absolute top-[-46px] right-[0] z-[-1] w-full flex">
+          <div class="absolute bottom-[11px] md:bottom-[14px] right-[0] max-w-[1240px] w-full overflow-hidden z-[-2]">
             <div>
-              <pre class="whitespace-pre font-mono leading-5 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-mono leading-3 md:leading-5 text-illustration-text bg-white">
 ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████</pre
               >
               <!-- ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════ -->
             </div>
           </div>
-          <div class="flex ml-auto mr-5 mt-[-60px] min-[856px]:mt-[0px]">
-            <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+
+          <div
+            class="min-[856px]:hidden absolute bottom-[-46px] right-[0] max-w-[1240px] w-full overflow-hidden z-[-2]"
+          >
+            <div>
+              <pre class="whitespace-pre font-mono leading-3 md:leading-5 text-illustration-text bg-white">
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████</pre
+              >
+              <!-- ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════ -->
+            </div>
+          </div>
+          <div
+            class="flex ml-auto mr-5 mt-[-40px] sm:mt-[-38px] md:mt-[-60px] min-[856px]:mt-[0px] text-xs leading-3 md:text-base md:leading-4"
+          >
+            <pre class="whitespace-pre font-mono text-illustration-text bg-white">
 ███████╗
 ██╔════╝
 █████╗  
@@ -667,7 +679,7 @@
 ███████╗
 ╚══════╝</pre
             >
-            <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+            <pre class="whitespace-pre font-mono text-illustration-text bg-white">
 ██████╗ 
 ██╔══██╗
 ██████╔╝
@@ -675,7 +687,7 @@
 ██║     
 ╚═╝     </pre
             >
-            <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+            <pre class="whitespace-pre font-mono text-illustration-text bg-white">
 ██╗
 ██║
 ██║
@@ -683,7 +695,7 @@
 ██║
 ╚═╝</pre
             >
-            <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+            <pre class="whitespace-pre font-mono text-illustration-text bg-white">
 ███████╗
 ██╔════╝
 ███████╗
@@ -691,7 +703,7 @@
 ███████║
 ╚══════╝</pre
             >
-            <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+            <pre class="whitespace-pre font-mono text-illustration-text bg-white">
  ██████╗ 
 ██╔═══██╗
 ██║   ██║
@@ -699,7 +711,7 @@
 ╚██████╔╝
  ╚═════╝ </pre
             >
-            <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+            <pre class="whitespace-pre font-mono text-illustration-text bg-white">
 ██████╗ 
 ██╔══██╗
 ██║  ██║
@@ -707,7 +719,7 @@
 ██████╔╝
  ╚═════╝ </pre
             >
-            <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+            <pre class="whitespace-pre font-mono text-illustration-text bg-white">
 ███████╗
 ██╔════╝
 █████╗  
@@ -715,7 +727,7 @@
 ███████╗
 ╚══════╝</pre
             >
-            <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+            <pre class="whitespace-pre font-mono text-illustration-text bg-white">
 ███████╗
 ██╔════╝
 ███████╗
@@ -725,13 +737,13 @@
             >
           </div>
         </div>
-        <h2 class="text-4xl font-bold uppercase text-gray-900 px-2 sm:px-4 leading-9 mb-6 inline-block">
-          <span class="bg-white inline-block px-2 sm:px-1 pt-3">Episodes</span>
+        <h2 class="text-2xl sm:text-4xl font-bold uppercase text-gray-900 px-2 sm:px-4 leading-9 mb-6 inline-block">
+          <span class="bg-white inline-block px-2 sm:px-1 py-2">Episodes</span>
         </h2>
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-14 gap-x-4 bg-white pt-2.5 px-2.5 pb-4"
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-10 gap-x-4 bg-white pt-2.5 px-2.5 pb-4"
         >
-          <article class="flex flex-col text-base leading-7 text-gray-900 min-w-[200px] max-w-[400px] w-full">
+          <article class="flex flex-col text-base leading-7 text-gray-900 min-w-[200px] max-w-[600px] w-full">
             <div class="video-container-small">
               <iframe
                 src="https://www.youtube.com/embed/OcRYIC40-jc"
@@ -750,7 +762,7 @@
               <time class="leading-9">10 days ago • 57 minutes</time>
             </header>
           </article>
-          <article class="flex flex-col text-base leading-7 text-gray-900 min-w-[200px] max-w-[400px] w-full">
+          <article class="flex flex-col text-base leading-7 text-gray-900 min-w-[200px] max-w-[600px] w-full">
             <div class="video-container-small">
               <iframe
                 src="https://www.youtube.com/embed/OcRYIC40-jc"
@@ -769,7 +781,7 @@
               <time class="leading-9">10 days ago • 57 minutes</time>
             </header>
           </article>
-          <article class="flex flex-col text-base leading-7 text-gray-900 min-w-[200px] max-w-[400px] w-full">
+          <article class="flex flex-col text-base leading-7 text-gray-900 min-w-[200px] max-w-[600px] w-full">
             <div class="video-container-small">
               <iframe
                 src="https://www.youtube.com/embed/OcRYIC40-jc"
@@ -788,7 +800,7 @@
               <time class="leading-9">10 days ago • 57 minutes</time>
             </header>
           </article>
-          <article class="flex flex-col text-base leading-7 text-gray-900 min-w-[200px] max-w-[400px] w-full">
+          <article class="flex flex-col text-base leading-7 text-gray-900 min-w-[200px] max-w-[600px] w-full">
             <div class="video-container-small">
               <iframe
                 src="https://www.youtube.com/embed/OcRYIC40-jc"
@@ -811,11 +823,11 @@
       </section>
 
       <!-- Shorts -->
-      <section class="mt-[220px] min-[710px]:mt-[140pxpx]" id="shorts">
+      <section class="mt-[420px] min-[710px]:mt-[140px]" id="shorts">
         <div class="w-full max-w-[1240px] mx-auto relative">
           <!-- Illustration -->
-          <div class="absolute top-[3px] right-[-362px] z-[-2]">
-            <pre class="whitespace-pre font-mono leading-4 text-illustration-green">
+          <div class="absolute top-[-400px] 2xl:top-[3px] right-[-0px] 2xl:right-[-362px] z-[-2]">
+            <pre class="whitespace-pre font-mono text-illustration-green text-xs leading-3 md:text-base md:leading-4">
   ..**#%%%%@@@@@@@@@@@@@@@@@%#%=.     
  =+++********###******%@@@@@@@@##*   
 .=++=#****##*#*****.**@@@@@@@@@@..=  
@@ -859,17 +871,30 @@
           </div>
 
           <!-- Section header ASCII text -->
-          <div class="absolute top-[-38px] right-[0] z-[-1] w-full flex">
-            <div class="absolute bottom-[14px] right-[0] max-w-[1240px] w-full overflow-hidden z-[-2]">
+          <div class="absolute top-[-42px] right-[0] z-[-1] w-full flex">
+            <div class="absolute bottom-[11px] md:bottom-[14px] right-[0] max-w-[1240px] w-full overflow-hidden z-[-2]">
               <div>
-                <pre class="whitespace-pre font-mono leading-5 text-illustration-text bg-white">
+                <pre class="whitespace-pre font-mono leading-3 md:leading-5 text-illustration-text bg-white">
 ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████</pre
                 >
                 <!-- ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════ -->
               </div>
             </div>
-            <div class="flex ml-auto mr-5 mt-[-60px] min-[710px]:mt-[0px]">
-              <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+
+            <div
+              class="min-[710px]:hidden absolute bottom-[-46px] md:bottom-[-76px] right-[0] max-w-[1240px] w-full overflow-hidden z-[-2]"
+            >
+              <div>
+                <pre class="whitespace-pre font-mono leading-3 md:leading-5 text-illustration-text bg-white">
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████</pre
+                >
+                <!-- ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════ -->
+              </div>
+            </div>
+            <div
+              class="flex ml-auto mr-5 mt-[-40px] min-[710px]:mt-[20px] md:mt-[0px] text-xs leading-3 md:text-base md:leading-4"
+            >
+              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
 ███████╗
 ██╔════╝
 ███████╗
@@ -877,7 +902,7 @@
 ███████║
 ╚══════╝</pre
               >
-              <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
 ██╗  ██╗
 ██║  ██║
 ███████║
@@ -885,7 +910,7 @@
 ██║  ██║
 ╚═╝  ╚═╝</pre
               >
-              <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
  ██████╗ 
 ██╔═══██╗
 ██║   ██║
@@ -893,7 +918,7 @@
 ╚██████╔╝
   ╚═════╝</pre
               >
-              <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
 ██████╗ 
 ██╔══██╗
 ██████╔╝
@@ -901,7 +926,7 @@
 ██║  ██║
 ╚═╝  ╚═╝</pre
               >
-              <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
 ████████╗
 ╚══██╔══╝
    ██║   
@@ -909,7 +934,7 @@
    ██║   
    ╚═╝   </pre
               >
-              <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
 ███████╗
 ██╔════╝
 ███████╗
@@ -920,7 +945,7 @@
             </div>
           </div>
 
-          <h2 class="text-4xl font-bold uppercase text-gray-900 px-2 sm:px-4 leading-9 mb-6 inline-block">
+          <h2 class="text-2xl sm:text-4xl font-bold uppercase text-gray-900 px-2 sm:px-4 leading-9 mb-6 inline-block">
             <span class="bg-white inline-block px-2 sm:px-1 pt-3">Shorts</span>
           </h2>
 
@@ -928,7 +953,7 @@
           <div
             class="hidden sm:grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-y-14 gap-x-2 bg-white pt-2.5 px-2.5 pb-4"
           >
-            <article class="flex flex-col text-base leading-7 text-gray-900 w-full max-w-[200px]">
+            <article class="shorts flex flex-col text-base leading-7 text-gray-900 w-full max-w-[200px]">
               <div class="shorts-container rounded-lg">
                 <iframe
                   src="https://www.youtube.com/embed/QxULyNok9xg"
@@ -944,7 +969,7 @@
                 <h3 class="font-bold leading-6">What Open Source Maintainers Should Know About Mental Health</h3>
               </header>
             </article>
-            <article class="flex flex-col text-base leading-7 text-gray-900 w-full max-w-[200px]">
+            <article class="shorts flex flex-col text-base leading-7 text-gray-900 w-full max-w-[200px]">
               <div class="shorts-container rounded-lg">
                 <iframe
                   src="https://www.youtube.com/embed/QxULyNok9xg"
@@ -960,7 +985,7 @@
                 <h3 class="font-bold leading-6">What Open Source Maintainers Should Know About Mental Health</h3>
               </header>
             </article>
-            <article class="flex flex-col text-base leading-7 text-gray-900 w-full max-w-[200px]">
+            <article class="shorts flex flex-col text-base leading-7 text-gray-900 w-full max-w-[200px]">
               <div class="shorts-container rounded-lg">
                 <iframe
                   src="https://www.youtube.com/embed/WGeDVmc3gtE"
@@ -976,7 +1001,7 @@
                 <h3 class="font-bold leading-6">What Open Source Maintainers Should Know About Mental Health</h3>
               </header>
             </article>
-            <article class="flex flex-col text-base leading-7 text-gray-900 w-full max-w-[200px]">
+            <article class="shorts flex flex-col text-base leading-7 text-gray-900 w-full max-w-[200px]">
               <div class="shorts-container rounded-lg">
                 <iframe
                   src="https://www.youtube.com/embed/QxULyNok9xg"
@@ -992,7 +1017,7 @@
                 <h3 class="font-bold leading-6">What Open Source Maintainers Should Know About Mental Health</h3>
               </header>
             </article>
-            <article class="flex flex-col text-base leading-7 text-gray-900 w-full max-w-[200px]">
+            <article class="shorts flex flex-col text-base leading-7 text-gray-900 w-full max-w-[200px]">
               <div class="shorts-container rounded-lg">
                 <iframe
                   src="https://www.youtube.com/embed/QxULyNok9xg"
@@ -1023,8 +1048,8 @@
           </div>
 
           <!-- Mobile layout -->
-          <div class="sm:hidden horizontal-scroll bg-white">
-            <article class="flex flex-col text-base leading-7 text-gray-900 w-full max-w-[160px]">
+          <div class="sm:hidden horizontal-scroll bg-white pt-2.5 px-2.5 pb-4">
+            <article class="shorts flex flex-col text-base leading-7 text-gray-900 w-full max-w-[160px]">
               <div class="shorts-container rounded-lg">
                 <iframe
                   src="https://www.youtube.com/embed/QxULyNok9xg"
@@ -1040,7 +1065,7 @@
                 <h3 class="font-bold leading-6">What Open Source Maintainers Should Know About Mental Health</h3>
               </header>
             </article>
-            <article class="flex flex-col text-base leading-7 text-gray-900 w-full max-w-[160px]">
+            <article class="shorts flex flex-col text-base leading-7 text-gray-900 w-full max-w-[160px]">
               <div class="shorts-container rounded-lg">
                 <iframe
                   src="https://www.youtube.com/embed/QxULyNok9xg"
@@ -1056,7 +1081,7 @@
                 <h3 class="font-bold leading-6">What Open Source Maintainers Should Know About Mental Health</h3>
               </header>
             </article>
-            <article class="flex flex-col text-base leading-7 text-gray-900 w-full max-w-[160px]">
+            <article class="shorts flex flex-col text-base leading-7 text-gray-900 w-full max-w-[160px]">
               <div class="shorts-container rounded-lg">
                 <iframe
                   src="https://www.youtube.com/embed/WGeDVmc3gtE"
@@ -1072,7 +1097,7 @@
                 <h3 class="font-bold leading-6">What Open Source Maintainers Should Know About Mental Health</h3>
               </header>
             </article>
-            <article class="flex flex-col text-base leading-7 text-gray-900 w-full max-w-[160px]">
+            <article class="shorts flex flex-col text-base leading-7 text-gray-900 w-full max-w-[160px]">
               <div class="shorts-container rounded-lg">
                 <iframe
                   src="https://www.youtube.com/embed/QxULyNok9xg"
@@ -1088,7 +1113,7 @@
                 <h3 class="font-bold leading-6">What Open Source Maintainers Should Know About Mental Health</h3>
               </header>
             </article>
-            <article class="flex flex-col text-base leading-7 text-gray-900 w-full max-w-[160px]">
+            <article class="shorts flex flex-col text-base leading-7 text-gray-900 w-full max-w-[160px]">
               <div class="shorts-container rounded-lg">
                 <iframe
                   src="https://www.youtube.com/embed/QxULyNok9xg"
@@ -1121,66 +1146,81 @@
       </section>
 
       <!-- Mental Health Resources -->
-      <section class="w-full max-w-[1240px] mx-auto mt-[400px] min-[1080px]:mt-[300px] relative" id="resources">
+      <section class="w-full max-w-[1240px] mx-auto mt-[600px] min-[1080px]:mt-[300px] relative" id="resources">
         <!-- Illustration -->
-        <div class="absolute top-[-340px] left-[-550px] z-[-2]">
-          <pre class="whitespace-pre font-mono leading-4 text-illustration-green">
-                                                                        
-          -**#####-                                                     
-          .-+******###########*+                                        
- .-=***********************##******.                                    
-+*****************************************:                             
-:-+**********************************************=                      
-::--+************************************************                   
-.::::--=*************************************************:              
---:-----=+*************************************************=            
-:---------=+**************************************************+         
-----------=+*+**************************************************:       
-----------==*+********************************************+=-.          
-----------==+++*********************************++--=+*#%.              
-=----------==+++************************++---+*##%%@@@@@                
-.:=-::---------==+*++**************+=---=**##%@@@@@@@@@@@@              
-.:-==------.. :::------==+*+++***++=-::-+***#%@@@@@@@@@@@@@@@@@@@=      
-:::-=------:--. ..:::----===:=---+**##%@@@@@@@@@@@@@@@@@@@@@@@@@%+++.   
-:::::-----------.  .:::----+-=#%%@@@@@@@@@@@@@@@@@@@@@@@@%+-::--:.      
-.:::::---=--------.  ..:::-*#@@@@@@@@@@@@@@@@@@@@@@+::---:.             
-::::::--=----------.  ..:-*@@@@@@@@@@@@@@@%=-:--: :----:                
-:::::::=------------.  .-*@@@@@@@@#=----: :------------.                
-::::::=--------------. .#:==::--:.:--------------------                 
-:::::=----------------.::::----------------------------                 
-::::---------------------------------------------------                 
-.:::=--------------------------------------------------                 
-:::--=.--::::::::::--------------------------------:.                   
-.:--+=+**#######%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@+--.                   
-:--*%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@---==.                  
- --#%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#--====                 
-  -+---*###%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@=--::.                  
-   -::.::::::::::::--------------------------------++                   
-    .:::::::----------------------========++++*#%%@@@                   
-     .:::::::------------===++++*#%%@@%%###%%@@@@@@@@                   
-      .::::= .-=++++*#%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@=.                 
-       .::--=*%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%*=:::::                 
-        ::-=*%@@@@@@@@@@@@@@@@@@@@@@*-::::::::.                         
-         ::+#@@@@@@@@@@%+-:::::::::.                                    
-          :+::::::::::::.                                               
-           ..  
-        </pre
+        <div
+          class="absolute top-[-600px] min-[1080px]:top-[-380px] left-[-100px] sm:left-[0px] min-[1080px]:left-[-350px] 2xl:left-[-550px] z-[-2]"
+        >
+          <pre class="whitespace-pre font-mono text-illustration-green text-xs leading-3 md:text-base md:leading-4">
+                                        -**#####-                                         
+                              .-+******###########*+                                      
+                     .-=***********************##******.                                  
+               +*****************************************:                                
+          :-+**********************************************=                              
+          ::--+************************************************                           
+         .::::--=*************************************************:                       
+          --:-----=+*************************************************=                    
+           :---------=+**************************************************+                
+             ----------=+*+**************************************************:            
+               ----------==*+********************************************+=-.             
+                 ----------==+++*********************************++--=+*#%.               
+                  =----------==+++************************++---+*##%%@@@@@                
+                .:=-::---------==+*++**************+=---=**##%@@@@@@@@@@@@                
+            .:-==------.. :::------==+*+++***++=-::-+***#%@@@@@@@@@@@@@@@@@@@=            
+            :::-=------:--. ..:::----===:=---+**##%@@@@@@@@@@@@@@@@@@@@@@@@@%+++.         
+            :::::-----------.  .:::----+-=#%%@@@@@@@@@@@@@@@@@@@@@@@@%+-::--:.            
+            .:::::---=--------.  ..:::-*#@@@@@@@@@@@@@@@@@@@@@@+::---:.                   
+             ::::::--=----------.  ..:-*@@@@@@@@@@@@@@@%=-:--: :----:                     
+              :::::::=------------.  .-*@@@@@@@@#=----: :------------.                    
+               ::::::=--------------. .#:==::--:.:--------------------                    
+                :::::=----------------.::::----------------------------                   
+                 ::::---------------------------------------------------                  
+                  .:::=--------------------------------------------------                 
+                   :::--=.--::::::::::--------------------------------:.                  
+                    .:--+=+**#######%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@+--.                 
+                     :--*%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@---==.               
+                      --#%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#--====              
+                       -+---*###%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@=--::.               
+                        -::.::::::::::::--------------------------------++                
+                         .:::::::----------------------========++++*#%%@@@                
+                          .:::::::------------===++++*#%%@@%%###%%@@@@@@@@                
+                           .::::= .-=++++*#%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@=.              
+                            .::--=*%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%*=:::::              
+                             ::-=*%@@@@@@@@@@@@@@@@@@@@@@*-::::::::.                      
+                              ::+#@@@@@@@@@@%+-:::::::::.                                 
+                               :+::::::::::::.                                            
+                                ..                                                        
+                                                                                          
+                                                                                          </pre
           >
         </div>
 
         <!-- Section header ASCII text -->
-        <div class="absolute top-[-198px] right-[0] z-[-1] w-full flex">
-          <div class="absolute bottom-[14px] right-[0] max-w-[1240px] w-full overflow-hidden z-[-2]">
+        <div class="absolute top-[-198px] sm:top-[-198px] right-[0] z-[-1] w-full flex">
+          <div class="absolute bottom-[11px] md:bottom-[14px] right-[0] max-w-[1240px] w-full overflow-hidden z-[-2]">
             <div>
-              <pre class="whitespace-pre font-mono leading-5 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-mono leading-3 md:leading-5 text-illustration-text bg-white">
 ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████</pre
               >
               <!-- ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════ -->
             </div>
           </div>
-          <div class="ml-auto mr-[20px] mt-[-90px] min-[1080px]:mt-[0px] xl:mt-[0]">
+
+          <div
+            class="min-[1080px]:hidden absolute bottom-[-62px] sm:bottom-[-76px] right-[0] max-w-[1240px] w-full overflow-hidden z-[-2]"
+          >
+            <div>
+              <pre class="whitespace-pre font-mono leading-3 md:leading-5 text-illustration-text bg-white">
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████</pre
+              >
+              <!-- ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════ -->
+            </div>
+          </div>
+          <div
+            class="ml-auto mr-[20px] mt-[-20px] md:mt-[-90px] min-[1080px]:mt-[0px] xl:mt-[0] text-xs leading-3 md:text-base md:leading-4"
+          >
             <div class="flex">
-              <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
 ███╗   ███╗
 ████╗ ████║
 ██╔████╔██║
@@ -1188,7 +1228,7 @@
 ██║ ╚═╝ ██║
 ╚═╝     ╚═╝</pre
               >
-              <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
 ███████╗
 ██╔════╝
 █████╗  
@@ -1196,7 +1236,7 @@
 ███████╗
 ╚══════╝</pre
               >
-              <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
 ███╗   ██╗
 ████╗  ██║
 ██╔██╗ ██║
@@ -1204,7 +1244,7 @@
 ██║ ╚████║
 ╚═╝  ╚═══╝</pre
               >
-              <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
 ████████╗
 ╚══██╔══╝
    ██║   
@@ -1212,7 +1252,7 @@
    ██║   
    ╚═╝   </pre
               >
-              <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
  █████╗ 
 ██╔══██╗
 ███████║
@@ -1220,7 +1260,7 @@
 ██║  ██║
 ╚═╝  ╚═╝</pre
               >
-              <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
 ██╗  
 ██║  
 ██║  
@@ -1231,7 +1271,7 @@
             </div>
 
             <div class="flex">
-              <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
 ██╗  ██╗
 ██║  ██║
 ███████║
@@ -1239,7 +1279,7 @@
 ██║  ██║
 ╚═╝  ╚═╝</pre
               >
-              <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
 ███████╗
 ██╔════╝
 █████╗  
@@ -1247,7 +1287,7 @@
 ███████╗
 ╚══════╝</pre
               >
-              <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
  █████╗ 
 ██╔══██╗
 ███████║
@@ -1255,7 +1295,7 @@
 ██║  ██║
 ╚═╝  ╚═╝</pre
               >
-              <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
 ██╗  ████████╗
 ██║  ╚══██╔══╝
 ██║     ██║   
@@ -1266,7 +1306,7 @@
             </div>
 
             <div class="flex">
-              <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
 ██████╗ 
 ██╔══██╗
 ██████╔╝
@@ -1274,7 +1314,7 @@
 ██║  ██║
 ╚═╝  ╚═╝</pre
               >
-              <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
 ███████╗
 ██╔════╝
 █████╗  
@@ -1282,7 +1322,7 @@
 ███████╗
 ╚══════╝</pre
               >
-              <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
 ███████╗
 ██╔════╝
 ███████╗
@@ -1290,7 +1330,7 @@
 ███████║
 ╚══════╝</pre
               >
-              <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
  ██████╗ 
 ██╔═══██╗
 ██║   ██║
@@ -1298,7 +1338,7 @@
 ╚██████╔╝
  ╚═════╝</pre
               >
-              <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
 ██╗   ██╗
 ██║   ██║
 ██║   ██║
@@ -1306,7 +1346,7 @@
 ╚██████╔╝
  ╚═════╝ </pre
               >
-              <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
 ██████╗ 
 ██╔══██╗
 ██████╔╝
@@ -1314,7 +1354,7 @@
 ██║  ██║
 ╚═╝  ╚═╝</pre
               >
-              <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
  ██████╗
 ██╔════╝
 ██║     
@@ -1322,7 +1362,7 @@
 ╚██████╗
  ╚═════╝</pre
               >
-              <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
 ███████╗
 ██╔════╝
 █████╗  
@@ -1330,7 +1370,7 @@
 ███████╗
 ╚══════╝</pre
               >
-              <pre class="whitespace-pre font-mono leading-4 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
 ███████╗
 ██╔════╝
 ███████╗
@@ -1342,7 +1382,7 @@
           </div>
         </div>
 
-        <h2 class="text-4xl font-bold uppercase text-gray-900 px-2 sm:px-4 leading-9 mb-6">
+        <h2 class="text-2xl sm:text-4xl font-bold uppercase text-gray-900 px-2 sm:px-4 leading-7 sm:leading-9 mb-6">
           <span class="bg-white inline-block px-2 sm:px-1 pt-3">Mental Health</span><br />
           <span class="bg-white inline-block px-2 sm:px-1 pb-3">Resources</span>
         </h2>
@@ -2409,8 +2449,8 @@
 
     <footer class="w-full max-w-[1240px] mx-auto mt-[490px] md:mt-16 mb-5 relative">
       <!-- Illustration -->
-      <div class="absolute bottom-[-40px] right-[-540px] z-[-2]">
-        <pre class="whitespace-pre font-mono leading-4 text-illustration-green">
+      <div class="absolute bottom-[-40px] right-[-340px] sm:right-[-240px] md:right-[-500px] lg:right-[-520px] z-[-2]">
+        <pre class="whitespace-pre font-mono leading-4 text-illustration-green text-sm leading-[14px]">
                                                                                                     
                                                                                          %#######   
                                                                                        @@%#***###%% 
@@ -2463,7 +2503,7 @@
       </div>
 
       <p class="px-2">
-        <span class="inline-block bg-white">
+        <span class="inline bg-white pt-[1px] pb-[2px]">
           Hosted on
           <a
             href="https://github.com/kelset/debug-mind-website"
@@ -2474,15 +2514,21 @@
           >, deployed with
           <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer" class="font-medium text-blue-500"
             >Netlify</a
-          >.</span
-        >
-        <span class="inline-block bg-white">&copy; 2024 debug:mind. All rights reserved. </span
-        ><span class="inline-block bg-white">
-          >Designed & built by
-          <a href="https://adamridovics.com" target="_blank" rel="noopener noreferrer" class="font-medium text-blue-500"
-            >Adam Ridovics</a
-          >.</span
-        >
+          >. </span
+        ><br class="md:hidden" />
+        <span class="inline bg-white pt-[1px] pb-[2px]">&copy; 2024 debug:mind. All rights reserved. </span>
+        <span class="inline bg-white pt-[1px] pb-[2px]"
+          ><br class="md:hidden" />
+          Designed & built by
+          <a
+            href="https://adamridovics.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-medium text-blue-500"
+          >
+            Adam Ridovics</a
+          >.
+        </span>
       </p>
     </footer>
   </body>
