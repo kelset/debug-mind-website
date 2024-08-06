@@ -14,7 +14,8 @@
       tailwind.config = {
         theme: {
           fontFamily: {
-            mono: "JetBrains Mono",
+            mono: "JetBrains Mono", // For proper rendering of the
+            asciiText: "Courier New", // For proper rendering of the
             script: "rizado-script",
           },
           extend: {
@@ -453,38 +454,42 @@
       <div class="flex gap-x-5 gap-y-2.5 pr-2 text-gray-900 bg-blue-50 rounded-lg max-md:flex-wrap max-md:pr-5">
         <div class="flex gap-3.5">
           <div class="flex justify-center overflow-hidden relative flex-col px-4 py-1 w-[130px] max-md:pr-5">
-            <img src="/assets/images/follow-bg-32.svg" class="absolute inset-0 size-full" alt="" />
+            <img src="./assets/images/follow-bg-32.svg" class="absolute inset-0 size-full" alt="" />
             <span class="relative z-10 text-[14px]">follow on:</span>
           </div>
         </div>
         <nav class="flex gap-5 justify-between my-auto font-bold whitespace-nowrap text-[14px]">
           <a
-            href="https://www.youtube.com/playlist?list=PLiD6R_aXkpLiMfS2YrhSgtSj09JJCaP2y"
+            href="https://www.youtube.com/@kelset/shorts"
             target="blank"
             class="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 underline-offset-4"
           >
             <span class="hidden sm:inline text-blue-500 hover:text-blue-900">Youtube</span>
-            <img src="/assets/images/youtube-icon.svg" alt="Youtube icon" class="block sm:hidden h-5 w-5" />
+            <img src="./assets/images/youtube-icon.svg" alt="Youtube icon" class="block sm:hidden h-5 w-5" />
           </a>
           <a
-            href="https://www.instagram.com/kelset.dev/"
+            href="https://www.instagram.com/debug_mind/"
             target="blank"
             class="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             <span class="hidden sm:inline text-blue-500 hover:text-blue-900">Instagram</span>
-            <img src="/assets/images/instagram-icon.svg" alt="Instagram icon" class="block sm:hidden h-5 w-5" />
-          </a>
-          <a href="#" target="blank" class="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <span class="hidden sm:inline text-blue-500 hover:text-blue-900">Tiktok</span>
-            <img src="/assets/images/tiktok-icon.svg" alt="Tiktok icon" class="block sm:hidden h-5 w-5" />
+            <img src="./assets/images/instagram-icon.svg" alt="Instagram icon" class="block sm:hidden h-5 w-5" />
           </a>
           <a
-            href="https://twitter.com/kelset"
+            href="https://www.tiktok.com/@debug_mind"
+            target="blank"
+            class="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <span class="hidden sm:inline text-blue-500 hover:text-blue-900">Tiktok</span>
+            <img src="./assets/images/tiktok-icon.svg" alt="Tiktok icon" class="block sm:hidden h-5 w-5" />
+          </a>
+          <a
+            href="https://twitter.com/debug_mind"
             target="blank"
             class="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             <span class="hidden sm:inline text-blue-500 hover:text-blue-900">Twitter</span>
-            <img src="/assets/images/twitter-icon.svg" alt="Twitter icon" class="block sm:hidden h-5 w-5" />
+            <img src="./assets/images/twitter-icon.svg" alt="Twitter icon" class="block sm:hidden h-5 w-5" />
           </a>
         </nav>
       </div>
@@ -551,7 +556,7 @@
           >
         </div>
 
-        <img loading="lazy" src="/logo.png" alt="Debug mind logo" class="max-w-full aspect-square w-[100px]" />
+        <img src="./logo.png" alt="Debug mind logo" class="max-w-full aspect-square w-[100px]" />
         <h2 class="sm:mt-5 text-xl sm:text-4xl leading-10 text-center text-sky-950 bg-white px-1">
           debug:<span class="font-extrabold">mind</span>
         </h2>
@@ -574,7 +579,7 @@
         </div>
       </section>
 
-      <!-- First Aid -->
+      <!-- FIRST AID -->
       <section class="text-base leading-6 text-sky-950 max-w-[1240px] w-full mx-auto" id="firstaid">
         <div class="bg-white p-2.5">
           <div
@@ -598,7 +603,7 @@
         </div>
       </section>
 
-      <!-- Episodes -->
+      <!-- EPISODES -->
       <section class="w-full max-w-[1240px] mx-auto mt-[420px] min-[856px]:mt-[140px] relative" id="episodes">
         <!-- Illustration -->
         <div
@@ -651,7 +656,7 @@
         <div class="absolute top-[-46px] right-[0] z-[-1] w-full flex">
           <div class="absolute bottom-[11px] md:bottom-[14px] right-[0] max-w-[1240px] w-full overflow-hidden z-[-2]">
             <div>
-              <pre class="whitespace-pre font-mono leading-3 md:leading-5 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-asciiText leading-3 md:leading-5 text-illustration-text bg-white">
 ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████</pre
               >
               <!-- ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════ -->
@@ -662,7 +667,7 @@
             class="min-[856px]:hidden absolute bottom-[-46px] right-[0] max-w-[1240px] w-full overflow-hidden z-[-2]"
           >
             <div>
-              <pre class="whitespace-pre font-mono leading-3 md:leading-5 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-asciiText leading-3 md:leading-5 text-illustration-text bg-white">
 ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████</pre
               >
               <!-- ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════ -->
@@ -671,7 +676,7 @@
           <div
             class="flex ml-auto mr-5 mt-[-40px] sm:mt-[-38px] md:mt-[-60px] min-[856px]:mt-[0px] text-xs leading-3 md:text-base md:leading-4"
           >
-            <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+            <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
 ███████╗
 ██╔════╝
 █████╗  
@@ -679,7 +684,7 @@
 ███████╗
 ╚══════╝</pre
             >
-            <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+            <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
 ██████╗ 
 ██╔══██╗
 ██████╔╝
@@ -687,7 +692,7 @@
 ██║     
 ╚═╝     </pre
             >
-            <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+            <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
 ██╗
 ██║
 ██║
@@ -695,7 +700,7 @@
 ██║
 ╚═╝</pre
             >
-            <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+            <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
 ███████╗
 ██╔════╝
 ███████╗
@@ -703,7 +708,7 @@
 ███████║
 ╚══════╝</pre
             >
-            <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+            <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
  ██████╗ 
 ██╔═══██╗
 ██║   ██║
@@ -711,15 +716,15 @@
 ╚██████╔╝
  ╚═════╝ </pre
             >
-            <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+            <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
 ██████╗ 
 ██╔══██╗
 ██║  ██║
 ██║  ██║
 ██████╔╝
- ╚═════╝ </pre
+╚═════╝ </pre
             >
-            <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+            <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
 ███████╗
 ██╔════╝
 █████╗  
@@ -727,7 +732,7 @@
 ███████╗
 ╚══════╝</pre
             >
-            <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+            <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
 ███████╗
 ██╔════╝
 ███████╗
@@ -822,7 +827,7 @@
         </div>
       </section>
 
-      <!-- Shorts -->
+      <!-- SHORTS -->
       <section class="mt-[420px] min-[710px]:mt-[140px]" id="shorts">
         <div class="w-full max-w-[1240px] mx-auto relative">
           <!-- Illustration -->
@@ -874,7 +879,7 @@
           <div class="absolute top-[-42px] right-[0] z-[-1] w-full flex">
             <div class="absolute bottom-[11px] md:bottom-[14px] right-[0] max-w-[1240px] w-full overflow-hidden z-[-2]">
               <div>
-                <pre class="whitespace-pre font-mono leading-3 md:leading-5 text-illustration-text bg-white">
+                <pre class="whitespace-pre font-asciiText leading-3 md:leading-5 text-illustration-text bg-white">
 ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████</pre
                 >
                 <!-- ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════ -->
@@ -885,7 +890,7 @@
               class="min-[710px]:hidden absolute bottom-[-46px] md:bottom-[-76px] right-[0] max-w-[1240px] w-full overflow-hidden z-[-2]"
             >
               <div>
-                <pre class="whitespace-pre font-mono leading-3 md:leading-5 text-illustration-text bg-white">
+                <pre class="whitespace-pre font-asciiText leading-3 md:leading-5 text-illustration-text bg-white">
 ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████</pre
                 >
                 <!-- ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════ -->
@@ -894,7 +899,7 @@
             <div
               class="flex ml-auto mr-5 mt-[-40px] min-[710px]:mt-[20px] md:mt-[0px] text-xs leading-3 md:text-base md:leading-4"
             >
-              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+              <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
 ███████╗
 ██╔════╝
 ███████╗
@@ -902,7 +907,7 @@
 ███████║
 ╚══════╝</pre
               >
-              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+              <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
 ██╗  ██╗
 ██║  ██║
 ███████║
@@ -910,15 +915,15 @@
 ██║  ██║
 ╚═╝  ╚═╝</pre
               >
-              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+              <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
  ██████╗ 
 ██╔═══██╗
 ██║   ██║
 ██║   ██║
 ╚██████╔╝
-  ╚═════╝</pre
+ ╚═════╝ </pre
               >
-              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+              <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
 ██████╗ 
 ██╔══██╗
 ██████╔╝
@@ -926,7 +931,7 @@
 ██║  ██║
 ╚═╝  ╚═╝</pre
               >
-              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+              <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
 ████████╗
 ╚══██╔══╝
    ██║   
@@ -934,7 +939,7 @@
    ██║   
    ╚═╝   </pre
               >
-              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+              <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
 ███████╗
 ██╔════╝
 ███████╗
@@ -1039,7 +1044,7 @@
               class="flex flex-col text-base leading-7 text-gray-900 w-full hover:underline"
             >
               <div id="watch-more" class="shorts-container gradient flex justify-center items-center rounded-lg">
-                <img src="/assets/images/watch-on-youtube.svg" alt="Watch more on Youtube" />
+                <img src="./assets/images/watch-on-youtube.svg" alt="Watch more on Youtube" />
               </div>
               <div class="mt-3.5 w-full px-2">
                 <h3 class="font-bold leading-6 text-blue-500">Want more?</h3>
@@ -1135,7 +1140,7 @@
               class="flex flex-col text-base leading-7 text-gray-900 w-full max-w-[160px] hover:underline"
             >
               <div id="watch-more" class="shorts-container gradient flex justify-center items-center rounded-lg">
-                <img src="/assets/images/watch-on-youtube.svg" alt="Watch more on Youtube" />
+                <img src="./assets/images/watch-on-youtube.svg" alt="Watch more on Youtube" />
               </div>
               <div class="mt-3.5 w-full px-2">
                 <h3 class="font-bold leading-6 text-blue-500">Want more?</h3>
@@ -1145,7 +1150,7 @@
         </div>
       </section>
 
-      <!-- Mental Health Resources -->
+      <!-- MENTAL HEALTH RESOURCES -->
       <section class="w-full max-w-[1240px] mx-auto mt-[600px] min-[1080px]:mt-[300px] relative" id="resources">
         <!-- Illustration -->
         <div
@@ -1199,7 +1204,7 @@
         <div class="absolute top-[-198px] sm:top-[-198px] right-[0] z-[-1] w-full flex">
           <div class="absolute bottom-[11px] md:bottom-[14px] right-[0] max-w-[1240px] w-full overflow-hidden z-[-2]">
             <div>
-              <pre class="whitespace-pre font-mono leading-3 md:leading-5 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-asciiText leading-3 md:leading-5 text-illustration-text bg-white">
 ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████</pre
               >
               <!-- ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════ -->
@@ -1210,7 +1215,7 @@
             class="min-[1080px]:hidden absolute bottom-[-62px] sm:bottom-[-76px] right-[0] max-w-[1240px] w-full overflow-hidden z-[-2]"
           >
             <div>
-              <pre class="whitespace-pre font-mono leading-3 md:leading-5 text-illustration-text bg-white">
+              <pre class="whitespace-pre font-asciiText leading-3 md:leading-5 text-illustration-text bg-white">
 ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████</pre
               >
               <!-- ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════ -->
@@ -1220,7 +1225,7 @@
             class="ml-auto mr-[20px] mt-[-20px] md:mt-[-90px] min-[1080px]:mt-[0px] xl:mt-[0] text-xs leading-3 md:text-base md:leading-4"
           >
             <div class="flex">
-              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+              <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
 ███╗   ███╗
 ████╗ ████║
 ██╔████╔██║
@@ -1228,7 +1233,7 @@
 ██║ ╚═╝ ██║
 ╚═╝     ╚═╝</pre
               >
-              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+              <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
 ███████╗
 ██╔════╝
 █████╗  
@@ -1236,7 +1241,7 @@
 ███████╗
 ╚══════╝</pre
               >
-              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+              <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
 ███╗   ██╗
 ████╗  ██║
 ██╔██╗ ██║
@@ -1244,7 +1249,7 @@
 ██║ ╚████║
 ╚═╝  ╚═══╝</pre
               >
-              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+              <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
 ████████╗
 ╚══██╔══╝
    ██║   
@@ -1252,7 +1257,7 @@
    ██║   
    ╚═╝   </pre
               >
-              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+              <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
  █████╗ 
 ██╔══██╗
 ███████║
@@ -1260,7 +1265,7 @@
 ██║  ██║
 ╚═╝  ╚═╝</pre
               >
-              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+              <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
 ██╗  
 ██║  
 ██║  
@@ -1271,7 +1276,7 @@
             </div>
 
             <div class="flex">
-              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+              <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
 ██╗  ██╗
 ██║  ██║
 ███████║
@@ -1279,7 +1284,7 @@
 ██║  ██║
 ╚═╝  ╚═╝</pre
               >
-              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+              <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
 ███████╗
 ██╔════╝
 █████╗  
@@ -1287,7 +1292,7 @@
 ███████╗
 ╚══════╝</pre
               >
-              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+              <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
  █████╗ 
 ██╔══██╗
 ███████║
@@ -1295,7 +1300,7 @@
 ██║  ██║
 ╚═╝  ╚═╝</pre
               >
-              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+              <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
 ██╗  ████████╗
 ██║  ╚══██╔══╝
 ██║     ██║   
@@ -1303,10 +1308,18 @@
 ███████╗██║   
 ╚══════╝╚═╝   </pre
               >
+              <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
+██╗  ██╗
+██║  ██║
+███████║
+██╔══██║
+██║  ██║
+╚═╝  ╚═╝</pre
+              >
             </div>
 
             <div class="flex">
-              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+              <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
 ██████╗ 
 ██╔══██╗
 ██████╔╝
@@ -1314,7 +1327,7 @@
 ██║  ██║
 ╚═╝  ╚═╝</pre
               >
-              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+              <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
 ███████╗
 ██╔════╝
 █████╗  
@@ -1322,7 +1335,7 @@
 ███████╗
 ╚══════╝</pre
               >
-              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+              <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
 ███████╗
 ██╔════╝
 ███████╗
@@ -1330,7 +1343,7 @@
 ███████║
 ╚══════╝</pre
               >
-              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+              <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
  ██████╗ 
 ██╔═══██╗
 ██║   ██║
@@ -1338,7 +1351,7 @@
 ╚██████╔╝
  ╚═════╝</pre
               >
-              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+              <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
 ██╗   ██╗
 ██║   ██║
 ██║   ██║
@@ -1346,7 +1359,7 @@
 ╚██████╔╝
  ╚═════╝ </pre
               >
-              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+              <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
 ██████╗ 
 ██╔══██╗
 ██████╔╝
@@ -1354,7 +1367,7 @@
 ██║  ██║
 ╚═╝  ╚═╝</pre
               >
-              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+              <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
  ██████╗
 ██╔════╝
 ██║     
@@ -1362,7 +1375,7 @@
 ╚██████╗
  ╚═════╝</pre
               >
-              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+              <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
 ███████╗
 ██╔════╝
 █████╗  
@@ -1370,7 +1383,7 @@
 ███████╗
 ╚══════╝</pre
               >
-              <pre class="whitespace-pre font-mono text-illustration-text bg-white">
+              <pre class="whitespace-pre font-asciiText text-illustration-text bg-white">
 ███████╗
 ██╔════╝
 ███████╗
@@ -2502,7 +2515,7 @@
         >
       </div>
 
-      <p class="px-2">
+      <p class="px-2 text-center">
         <span class="inline bg-white pt-[1px] pb-[2px]">
           Hosted on
           <a
