@@ -5,16 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <title>debug:mind</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap"
-      rel="stylesheet"
+    <meta
+      name="description"
+      content="Diving deep into the minds of developers - a podcast by Lorenzo 'kelset' Sciandra"
     />
+    <meta property="og:title" content="debug:mind" />
+    <meta
+      property="og:description"
+      content="Diving deep into the minds of developers - a podcast by Lorenzo 'kelset' Sciandra"
+    />
+    <meta property="og:image" content="https://debug-mind.com/og-meta-image-debug-mind.jpg" />
+    <meta property="og:url" content="https://debug-mind.com/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="debug:mind" />
+    <meta
+      name="twitter:description"
+      content="Diving deep into the minds of developers - a podcast by Lorenzo 'kelset' Sciandra"
+    />
+    <meta name="twitter:image" content="https://debug-mind.com/og-meta-image-debug-mind.jpg" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           fontFamily: {
-            mono: "JetBrains Mono",
             asciiText: "Courier New", // For proper rendering of the ASCII Texts in Firefox
           },
           extend: {
@@ -38,6 +54,86 @@
       };
     </script>
     <style>
+      @font-face {
+        font-family: "JetBrains Mono";
+        font-style: normal;
+        font-weight: 400;
+        src: url("assets/fonts/JetBrainsMono-Regular.ttf") format("truetype");
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "JetBrains Mono";
+        font-style: normal;
+        font-weight: 500;
+        src: url("assets/fonts/JetBrainsMono-Medium.ttf") format("truetype");
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "JetBrains Mono";
+        font-style: normal;
+        font-weight: 600;
+        src: url("assets/fonts/JetBrainsMono-SemiBold.ttf") format("truetype");
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "JetBrains Mono";
+        font-style: normal;
+        font-weight: 700;
+        src: url("assets/fonts/JetBrainsMono-Bold.ttf") format("truetype");
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "JetBrains Mono";
+        font-style: normal;
+        font-weight: 800;
+        src: url("assets/fonts/JetBrainsMono-ExtraBold.ttf") format("truetype");
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "JetBrains Mono";
+        font-style: italic;
+        font-weight: 400;
+        src: url("assets/fonts/JetBrainsMono-Italic.ttf") format("truetype");
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "JetBrains Mono";
+        font-style: italic;
+        font-weight: 500;
+        src: url("assets/fonts/JetBrainsMono-MediumItalic.ttf") format("truetype");
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "JetBrains Mono";
+        font-style: italic;
+        font-weight: 600;
+        src: url("assets/fonts/JetBrainsMono-SemiBoldItalic.ttf") format("truetype");
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "JetBrains Mono";
+        font-style: italic;
+        font-weight: 700;
+        src: url("assets/fonts/JetBrainsMono-BoldItalic.ttf") format("truetype");
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "JetBrains Mono";
+        font-style: italic;
+        font-weight: 800;
+        src: url("assets/fonts/JetBrainsMono-ExtraBoldItalic.ttf") format("truetype");
+        font-display: swap;
+      }
+
       html {
         scroll-behavior: smooth;
       }
@@ -203,7 +299,7 @@
             target="blank"
             class="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 underline-offset-4"
           >
-            <span class="hidden sm:inline text-blue-500 hover:text-blue-900">Youtube</span>
+            <span class="hidden sm:inline text-blue-600 hover:text-blue-900">Youtube</span>
             <img src="./assets/images/youtube-icon.svg" alt="Youtube icon" class="block sm:hidden h-5 w-5" />
           </a>
           <a
@@ -211,7 +307,7 @@
             target="blank"
             class="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
-            <span class="hidden sm:inline text-blue-500 hover:text-blue-900">Instagram</span>
+            <span class="hidden sm:inline text-blue-600 hover:text-blue-900">Instagram</span>
             <img src="./assets/images/instagram-icon.svg" alt="Instagram icon" class="block sm:hidden h-5 w-5" />
           </a>
           <a
@@ -219,7 +315,7 @@
             target="blank"
             class="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
-            <span class="hidden sm:inline text-blue-500 hover:text-blue-900">Tiktok</span>
+            <span class="hidden sm:inline text-blue-600 hover:text-blue-900">Tiktok</span>
             <img src="./assets/images/tiktok-icon.svg" alt="Tiktok icon" class="block sm:hidden h-5 w-5" />
           </a>
           <a
@@ -227,15 +323,15 @@
             target="blank"
             class="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
-            <span class="hidden sm:inline text-blue-500 hover:text-blue-900">Twitter</span>
+            <span class="hidden sm:inline text-blue-600 hover:text-blue-900">Twitter</span>
             <img src="./assets/images/twitter-icon.svg" alt="Twitter icon" class="block sm:hidden h-5 w-5" />
           </a>
         </nav>
       </div>
       <nav class="flex gap-5 justify-between self-start font-bold text-sky-950 text-[14px] pl-4">
-        <a href="#firstaid" class="focus:outline-none focus:ring-2 text-blue-500"><span>🩹 </span>First Aid</a>
-        <a href="#episodes" class="focus:outline-none focus:ring-2 text-blue-500"><span>📺 </span>Episodes</a>
-        <a href="#resources" class="focus:outline-none focus:ring-2 text-blue-500"><span>📚 </span>Resources</a>
+        <a href="#firstaid" class="focus:outline-none focus:ring-2 text-blue-600"><span>🩹 </span>First Aid</a>
+        <a href="#episodes" class="focus:outline-none focus:ring-2 text-blue-600"><span>📺 </span>Episodes</a>
+        <a href="#resources" class="focus:outline-none focus:ring-2 text-blue-600"><span>📚 </span>Resources</a>
       </nav>
     </header>
 
@@ -244,7 +340,10 @@
         <!-- Illustration -->
         <div id="hero-illustration" class="absolute top-[-1px] right-[-194px] sm:right-[-194px] z-[-2]"></div>
 
-        <img src="./logo.png" alt="Debug mind logo" class="max-w-full aspect-square w-[100px]" />
+        <picture>
+          <source srcset="logo.webp" type="image/webp" />
+          <img src="logo.png" alt="Debug mind logo" class="max-w-full aspect-square w-[100px]" />
+        </picture>
         <h2 class="sm:mt-5 text-xl sm:text-4xl leading-10 text-center text-sky-950 bg-white px-1">
           debug:<span class="font-extrabold">mind</span>
         </h2>
@@ -282,7 +381,7 @@
                 href="https://explore.healthygamer.gg/mentalhealthresources"
                 target="blank"
                 rel="noopener noreferrer"
-                class="font-medium underline text-blue-500"
+                class="font-medium underline text-blue-600"
                 >mental health resources</a
               >
               might be able to help you.
@@ -495,7 +594,7 @@
                 <img src="./assets/images/watch-on-youtube.svg" alt="Watch more on Youtube" />
               </div>
               <div class="mt-3.5 w-full px-2">
-                <h3 class="font-bold leading-6 text-blue-500">Want more?</h3>
+                <h3 class="font-bold leading-6 text-blue-600">Want more?</h3>
               </div>
             </a>
           </div>
@@ -591,7 +690,7 @@
                 <img src="./assets/images/watch-on-youtube.svg" alt="Watch more on Youtube" />
               </div>
               <div class="mt-3.5 w-full px-2">
-                <h3 class="font-bold leading-6 text-blue-500">Want more?</h3>
+                <h3 class="font-bold leading-6 text-blue-600">Want more?</h3>
               </div>
             </a>
           </div>
@@ -619,10 +718,10 @@
             href="https://github.com/kelset/debug-mind-website"
             target="_blank"
             rel="noopener noreferrer"
-            class="font-medium text-blue-500"
+            class="font-medium text-blue-600"
             >GitHub</a
           >, deployed with
-          <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer" class="font-medium text-blue-500"
+          <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer" class="font-medium text-blue-600"
             >Netlify</a
           >. </span
         ><br class="md:hidden" />
@@ -634,7 +733,7 @@
             href="https://adamridovics.com"
             target="_blank"
             rel="noopener noreferrer"
-            class="font-medium text-blue-500"
+            class="font-medium text-blue-600"
           >
             Adam Ridovics</a
           >.
