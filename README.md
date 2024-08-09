@@ -4,8 +4,8 @@
 
 Website for the [debug:mind series](https://www.youtube.com/playlist?list=PLiD6R_aXkpLiMfS2YrhSgtSj09JJCaP2y) 🎙️🧠
 
-With content & illustrations separated into html files in `./partials`.
-Partials are added into the index.html by running `node predeploy.js` via `netlify.toml` on every push.
+With content & illustrations (ASCII Illustrations & text) separated into html files in `./partials`.
+Partials and Youtube content are added into the index.html by running `node predeploy.js` via `netlify.toml` on every push.
 
 ## License
 
