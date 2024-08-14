@@ -268,8 +268,8 @@
       }
 
       /* Custom CSS to hide scrollbar on mobile */
+      /* Tailwind's sm breakpoint */
       @media (max-width: 640px) {
-        /* Tailwind's sm breakpoint */
         .horizontal-scroll {
           -ms-overflow-style: none; /* IE and Edge */
           scrollbar-width: none; /* Firefox */
@@ -464,7 +464,9 @@
             >Netlify</a
           >. </span
         ><br class="md:hidden" />
-        <span class="inline bg-white pt-[1px] pb-[2px]">&copy; 2024 debug:mind. All rights reserved. </span>
+        <span class="inline bg-white pt-[1px] pb-[2px]"
+          >&copy; 2024 debug:<span class="font-extrabold">mind</span>. All rights reserved.
+        </span>
         <span class="inline bg-white pt-[1px] pb-[2px]"
           ><br class="md:hidden" />
           Designed & built by
