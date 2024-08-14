@@ -56,6 +56,15 @@ const insertVideoContent = (indexContent, containerId, newContent) => {
   return indexContent.replace(containerPattern, `$1${newContent}$4`);
 };
 
+const updateMainVideoSrc = (indexContent, videoId) => {
+  const iframePattern = /(<iframe[^>]*src="https:\/\/www\.youtube\.com\/embed\/)[^"]+("[^>]*><\/iframe>)/;
+  if (!iframePattern.test(indexContent)) {
+    console.error("Iframe with YouTube embed not found in index.html");
+    return indexContent;
+  }
+  return indexContent.replace(iframePattern, `$1${videoId}$2`);
+};
+
 const buildIndex = () => {
   const indexPath = path.join(__dirname, "index.html");
   let indexContent = fs.readFileSync(indexPath, "utf8");
@@ -113,7 +122,17 @@ const buildIndex = () => {
   const youtubeContent = JSON.parse(fs.readFileSync(youtubeContentPath, "utf8"));
 
   let newEpisodesContent = "";
-  youtubeContent.long_form_videos.forEach((video) => {
+
+  // Update the iframe src with the first video ID from long_form_videos
+  const firstVideoId = youtubeContent.long_form_videos[0]?.video_id;
+  if (firstVideoId) {
+    indexContent = updateMainVideoSrc(indexContent, firstVideoId);
+  } else {
+    console.error("No video ID found for the first long-form video");
+  }
+
+  // Insert content for remaining long-form videos (skip the first)
+  youtubeContent.long_form_videos.slice(1).forEach((video) => {
     if (video.title && video.video_id && video.length && video.upload_date) {
       newEpisodesContent += `
         <article class="flex flex-col text-base leading-7 text-gray-900 min-w-[200px] max-w-[600px] w-full">
