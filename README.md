@@ -1,6 +1,13 @@
 # debug:mind website
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/7b0584ff-9f79-4838-b56f-939a2ecb59a4/deploy-status)](https://app.netlify.com/sites/debug-mind/deploys)
+![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen)
+<a href="https://github.com/kelset?tab=followers">
+<img alt="follow me on github" src="https://img.shields.io/github/followers/kelset?label=Follow%20%40kelset&style=social" />
+</a>
+<a href="https://twitter.com/kelset">
+<img alt="follow me on twitter" src="https://img.shields.io/twitter/follow/kelset?label=Follow%20%40kelset&style=social" />
+</a>
 
 Welcome to the website of my [debug:mind series](https://www.youtube.com/playlist?list=PLiD6R_aXkpLiMfS2YrhSgtSj09JJCaP2y) 🎙️🧠
 
