@@ -15,7 +15,7 @@ This website showcase 3 main things:
 
 - the list of debug mind episodes
 - the shorts extracted from said episodes
-- all the various mental health resources I've found around the web
+- all the various mental health resources I've found around the web (_originally collected into the separate repo [mental-health-resources](https://github.com/kelset/mental-health-resources)_)
 
 ### Good to know
 
