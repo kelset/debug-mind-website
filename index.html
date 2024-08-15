@@ -5,19 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <title>debug:mind</title>
-    <!-- Import JetBrains Mono font from Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap"
-      rel="stylesheet"
+    <meta
+      name="description"
+      content="Diving deep into the minds of developers - a podcast by Lorenzo 'kelset' Sciandra"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    <meta property="og:title" content="debug:mind" />
+    <meta
+      property="og:description"
+      content="Diving deep into the minds of developers - a podcast by Lorenzo 'kelset' Sciandra"
     />
+    <meta property="og:image" content="https://debug-mind.com/og-meta-image-debug-mind.jpg" />
+    <meta property="og:url" content="https://debug-mind.com/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="debug:mind" />
+    <meta
+      name="twitter:description"
+      content="Diving deep into the minds of developers - a podcast by Lorenzo 'kelset' Sciandra"
+    />
+    <meta name="twitter:image" content="https://debug-mind.com/og-meta-image-debug-mind.jpg" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            asciiText: "Courier New", // For proper rendering of the ASCII Texts in Firefox
+          },
+          extend: {
+            colors: {
+              "custom-dark": "#003558",
+              "illustration-green": "#46C0B7",
+              "illustration-bg": "rgba(43, 108, 176, 0.20)",
+              "illustration-text": "rgba(170, 196, 224, 1)",
+            },
+            backgroundImage: {
+              attentionGradient: "linear-gradient(0deg, #CAE9FA 0%, #CAE9FA 100%)",
+            },
+            listStyleType: {
+              circle: "circle",
+            },
+            screens: {
+              xl2: "1440px",
+            },
+          },
+        },
+      };
+    </script>
     <style>
+      @font-face {
+        font-family: "JetBrains Mono";
+        font-style: normal;
+        font-weight: 400;
+        src: url("assets/fonts/JetBrainsMono-Regular.ttf") format("truetype");
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "JetBrains Mono";
+        font-style: normal;
+        font-weight: 500;
+        src: url("assets/fonts/JetBrainsMono-Medium.ttf") format("truetype");
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "JetBrains Mono";
+        font-style: normal;
+        font-weight: 600;
+        src: url("assets/fonts/JetBrainsMono-SemiBold.ttf") format("truetype");
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "JetBrains Mono";
+        font-style: normal;
+        font-weight: 700;
+        src: url("assets/fonts/JetBrainsMono-Bold.ttf") format("truetype");
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "JetBrains Mono";
+        font-style: normal;
+        font-weight: 800;
+        src: url("assets/fonts/JetBrainsMono-ExtraBold.ttf") format("truetype");
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "JetBrains Mono";
+        font-style: italic;
+        font-weight: 400;
+        src: url("assets/fonts/JetBrainsMono-Italic.ttf") format("truetype");
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "JetBrains Mono";
+        font-style: italic;
+        font-weight: 500;
+        src: url("assets/fonts/JetBrainsMono-MediumItalic.ttf") format("truetype");
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "JetBrains Mono";
+        font-style: italic;
+        font-weight: 600;
+        src: url("assets/fonts/JetBrainsMono-SemiBoldItalic.ttf") format("truetype");
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "JetBrains Mono";
+        font-style: italic;
+        font-weight: 700;
+        src: url("assets/fonts/JetBrainsMono-BoldItalic.ttf") format("truetype");
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "JetBrains Mono";
+        font-style: italic;
+        font-weight: 800;
+        src: url("assets/fonts/JetBrainsMono-ExtraBoldItalic.ttf") format("truetype");
+        font-display: swap;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
         font-family: "JetBrains Mono", monospace;
       }
+
       .title {
         color: #003558; /* Custom color for the title */
       }
@@ -34,31 +158,328 @@
         padding: 1rem; /* Spacing inside the box */
         margin-top: 2rem; /* Space above the box */
       }
+
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+        max-width: 1240px;
+        width: 100%;
+      }
+
+      .video-container-small {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+        min-width: 200px;
+        max-width: 600px;
+        width: 100%;
+      }
+
+      .video-container iframe,
+      .video-container-small iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .shorts-container {
+        position: relative;
+        padding-bottom: 178%; /* Maintain the aspect ratio */
+        height: 0;
+        overflow: hidden;
+        min-width: 150px;
+        max-width: 200px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .shorts-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 101%;
+        height: 101%;
+      }
+
+      .shorts-container img {
+        position: absolute;
+        top: 57%; /*  to better align w the Shorts logos on the other shorts */
+        left: 48%;
+        transform: translate(-50%, -50%);
+      }
+
+      /* Custom styles for horizontal scrolling */
+      .horizontal-scroll {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 8px;
+      }
+
+      .horizontal-scroll > * {
+        scroll-snap-align: start;
+        flex: 0 0 auto;
+        width: 160px;
+      }
+
+      .gradient {
+        background: linear-gradient(0deg, #cae9fa 0%, #cae9fa 100%), #ebf8ff;
+      }
+
+      a {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        text-decoration-color: #3b82f6 !important;
+        text-decoration-thickness: 1px !important;
+        color: #3b82f6;
+        transition: color 0.3s ease, background-color 0.3s ease;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 2px !important;
+        text-decoration-color: #1e3a8a !important;
+        color: #1e3a8a;
+      }
+
+      a:hover h3 {
+        color: #1e3a8a;
+      }
+
+      ul {
+        padding-left: 1.4rem !important;
+      }
+
+      ul li {
+        padding-left: 10px;
+        overflow-wrap: break-word;
+      }
+
+      ul li a {
+        text-decoration: underline;
+        font-weight: 500;
+      }
+
+      /* Custom CSS to hide scrollbar on mobile */
+      /* Tailwind's sm breakpoint */
+      @media (max-width: 640px) {
+        .horizontal-scroll {
+          -ms-overflow-style: none; /* IE and Edge */
+          scrollbar-width: none; /* Firefox */
+        }
+        .horizontal-scroll::-webkit-scrollbar {
+          display: none; /* Chrome, Safari, and Opera */
+        }
+      }
     </style>
   </head>
-  <body class="text-gray-900 flex flex-col justify-center min-h-screen bg-gradient-to-r from-gray-100 to-blue-100 pb-10">
-    <div class="text-center">
-      <img src="./logo.png" alt="debug:mind Logo" class="mx-auto" style="max-width: 120px; margin-bottom: 20px" />
-      <h1 class="text-4xl font-bold title">debug:mind</h1>
-      <p class="text-xl mt-4">Diving deep into the minds of developers.</p>
-      <div class="latest-episode my-8 flex justify-center">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/OcRYIC40-jc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <body class="text-gray-900 flex flex-col min-h-screen py-2.5 px-2.5 sm:px-5 relative overflow-x-clip">
+    <!-- BG Illustration -->
+    <div id="bg-illustration" class="absolute inset-0 flex justify-center z-[-3]"></div>
+
+    <!-- Content -->
+    <header class="flex flex-col justify-center text-base leading-7 w-full max-w-[1240px] mx-auto gap-2.5">
+      <div class="flex gap-x-5 gap-y-2.5 pr-2 text-gray-900 bg-blue-50 rounded-lg max-md:flex-wrap max-md:pr-5">
+        <div class="flex gap-3.5">
+          <div class="flex justify-center overflow-hidden relative flex-col px-4 py-1 w-[130px] max-md:pr-5">
+            <img src="./assets/images/follow-bg-32.svg" class="absolute inset-0 size-full" alt="" />
+            <span class="relative z-10 text-[14px]">follow on:</span>
+          </div>
+        </div>
+        <nav class="flex gap-5 justify-between my-auto font-bold whitespace-nowrap text-[14px]">
+          <a
+            href="https://www.youtube.com/playlist?list=PLiD6R_aXkpLiMfS2YrhSgtSj09JJCaP2y"
+            target="blank"
+            class="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 underline-offset-4"
+          >
+            <span class="hidden sm:inline text-blue-600 hover:text-blue-900">Youtube</span>
+            <img src="./assets/images/youtube-icon.svg" alt="Youtube icon" class="block sm:hidden h-5 w-5" />
+          </a>
+          <a
+            href="https://www.instagram.com/debug_mind/"
+            target="blank"
+            class="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <span class="hidden sm:inline text-blue-600 hover:text-blue-900">Instagram</span>
+            <img src="./assets/images/instagram-icon.svg" alt="Instagram icon" class="block sm:hidden h-5 w-5" />
+          </a>
+          <a
+            href="https://www.tiktok.com/@debug_mind"
+            target="blank"
+            class="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <span class="hidden sm:inline text-blue-600 hover:text-blue-900">Tiktok</span>
+            <img src="./assets/images/tiktok-icon.svg" alt="Tiktok icon" class="block sm:hidden h-5 w-5" />
+          </a>
+          <a
+            href="https://twitter.com/debug_mind"
+            target="blank"
+            class="hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <span class="hidden sm:inline text-blue-600 hover:text-blue-900">Twitter</span>
+            <img src="./assets/images/twitter-icon.svg" alt="Twitter icon" class="block sm:hidden h-5 w-5" />
+          </a>
+        </nav>
       </div>
-      <div class="text-center mt-8">
-        <p class="text-lg mb-2">Want more?</p>
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto mb-4 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-        </svg>
-        <a href="https://www.youtube.com/playlist?list=PLiD6R_aXkpLiMfS2YrhSgtSj09JJCaP2y" target="_blank">
-          <img src="./watch-on-yt.svg" alt="Watch on YouTube" class="mx-auto hover:opacity-75 transition-opacity duration-300" />
-        </a>
-      </div>
-      <div class="callout-box bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 mt-8" role="alert">
-        <p>If you or someone you know is struggling, these <a href="https://explore.healthygamer.gg/mentalhealthresources" target="_blank" rel="noopener noreferrer" class="underline font-bold">mental health resources</a> might be able to help you.</p>
-      </div>
-      <footer class="mt-16">
-        <p>Hosted on <a href="https://github.com/kelset/debug-mind-website" target="_blank" rel="noopener noreferrer">GitHub</a>, deployed with <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer">Netlify</a>. &copy; 2024 debug:mind. All rights reserved. <br /></p>
-      </footer>
-    </div>
+      <nav class="flex gap-5 justify-between self-start font-bold text-sky-950 text-[14px] pl-4">
+        <a href="#firstaid" class="focus:outline-none focus:ring-2 text-blue-600"><span>🩹 </span>First Aid</a>
+        <a href="#episodes" class="focus:outline-none focus:ring-2 text-blue-600"><span>📺 </span>Episodes</a>
+        <a href="#resources" class="focus:outline-none focus:ring-2 text-blue-600"><span>📚 </span>Resources</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="flex flex-col items-center py-16 max-w-[1240px] w-full mx-auto relative">
+        <!-- Illustration -->
+        <div id="hero-illustration" class="absolute top-[-1px] right-[-194px] sm:right-[-194px] z-[-2]"></div>
+
+        <picture>
+          <source srcset="logo.webp" type="image/webp" />
+          <img src="logo.png" alt="Debug mind logo" class="max-w-full aspect-square w-[100px]" />
+        </picture>
+        <h2 class="sm:mt-5 text-xl sm:text-4xl leading-10 text-center text-sky-950 bg-white px-1">
+          debug:<span class="font-extrabold">mind</span>
+        </h2>
+        <h1
+          class="mt-11 text-2xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 text-center sm:text-left leading-[30px] sm:leading-[60px] md:leading-[78px] sm:w-[600px] md:w-[736px] max-md:mt-10 max-md:max-w-full"
+        >
+          <!-- Diving deep into the minds of developers -->
+          <span class="inline bg-white px-2">Diving deep into the</span><br />
+          <span class="inline bg-white px-2">minds of developers</span>
+        </h1>
+        <div class="video-container mt-20 max-md:mt-10 border-[10px] border-white">
+          <iframe
+            src="https://www.youtube.com/embed/OcRYIC40-jc"
+            title="YouTube video of the latest episode of debug:mind"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            class="rounded-lg"
+          ></iframe>
+        </div>
+      </section>
+
+      <!-- FIRST AID -->
+      <section id="firstaid" class="text-base leading-6 text-sky-950 max-w-[1240px] w-full mx-auto">
+        <div class="bg-white p-2.5">
+          <div
+            class="flex flex-row gap-3 items-center py-3 px-5 rounded-lg"
+            style="background: linear-gradient(0deg, #cae9fa 0%, #cae9fa 100%), #ebf8ff"
+          >
+            <!-- <img loading="lazy" src="/assets/images/emergency-icon-mid.svg" class="" alt="Mental health resources icon" /> -->
+            <span class="text-4xl self-start sm:self-auto">❤️‍🩹</span>
+            <p class="py-2.5 sm:py-0">
+              If you or someone you know is struggling, these
+              <a
+                href="https://explore.healthygamer.gg/mentalhealthresources"
+                target="blank"
+                rel="noopener noreferrer"
+                class="font-medium underline text-blue-600"
+                >mental health resources</a
+              >
+              might be able to help you.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- EPISODES -->
+      <section id="episodes" class="w-full max-w-[1240px] mx-auto mt-[420px] min-[856px]:mt-[140px] relative">
+        <!-- Illustration -->
+        <div
+          id="episodes-illustration"
+          class="absolute top-[-460px] lg:top-[-360px] left-[-100px] sm:left-[-100px] min-[856px]:left-[-170px] lg:left-[-270px] xl:left-[-470px] z-[-2]"
+        ></div>
+
+        <!-- Section header ASCII text -->
+        <div id="episodes-ascii-text" class="absolute top-[-46px] right-[0] z-[-1] w-full flex"></div>
+        <h2 class="text-2xl sm:text-4xl font-bold uppercase text-gray-900 px-2 sm:px-4 leading-9 mb-6 inline-block">
+          <span class="bg-white inline-block px-2 sm:px-1 py-2">Episodes</span>
+        </h2>
+        <div
+          id="episodes-container"
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-10 gap-x-4 bg-white pt-2.5 px-2.5 pb-4"
+        ></div>
+      </section>
+
+      <!-- SHORTS -->
+      <section id="shorts" class="mt-[420px] min-[710px]:mt-[140px]">
+        <div class="w-full max-w-[1240px] mx-auto relative">
+          <!-- Illustration -->
+          <div
+            id="shorts-illustration"
+            class="absolute top-[-400px] 2xl:top-[3px] right-[-0px] 2xl:right-[-362px] z-[-2]"
+          ></div>
+
+          <!-- Section header ASCII text -->
+          <div id="shorts-ascii-text" class="absolute top-[-42px] right-[0] z-[-1] w-full flex"></div>
+
+          <h2 class="text-2xl sm:text-4xl font-bold uppercase text-gray-900 px-2 sm:px-4 leading-9 mb-6 inline-block">
+            <span class="bg-white inline-block px-2 sm:px-1 pt-3">Shorts</span>
+          </h2>
+
+          <!-- Desktop layout -->
+          <div
+            id="shorts-container-desktop"
+            class="hidden lg:grid lg:grid-cols-6 gap-y-14 gap-x-2 bg-white pt-2.5 px-2.5 pb-4"
+          ></div>
+
+          <!-- Mobile layout -->
+          <div id="shorts-container-mobile" class="lg:hidden horizontal-scroll bg-white pt-2.5 px-2.5 pb-4"></div>
+        </div>
+      </section>
+
+      <!-- MENTAL HEALTH RESOURCES -->
+      <section
+        id="resources"
+        class="w-full max-w-[1240px] mx-auto mt-[600px] min-[1080px]:mt-[300px] relative"
+      ></section>
+    </main>
+
+    <footer class="w-full max-w-[1240px] mx-auto mt-[490px] md:mt-16 mb-5 relative">
+      <!-- Illustration -->
+      <div
+        id="footer-illustration"
+        class="absolute bottom-[-40px] right-[-340px] sm:right-[-240px] md:right-[-500px] lg:right-[-520px] z-[-2]"
+      ></div>
+
+      <p class="px-2">
+        <span class="inline bg-white pt-[1px] pb-[2px]">
+          Hosted on
+          <a
+            href="https://github.com/kelset/debug-mind-website"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-medium text-blue-600"
+            >GitHub</a
+          >, deployed with
+          <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer" class="font-medium text-blue-600"
+            >Netlify</a
+          >. </span
+        ><br class="md:hidden" />
+        <span class="inline bg-white pt-[1px] pb-[2px]"
+          >&copy; 2024 debug:<span class="font-extrabold">mind</span>. All rights reserved.
+        </span>
+        <span class="inline bg-white pt-[1px] pb-[2px]"
+          ><br class="md:hidden" />
+          Designed & built by
+          <a
+            href="https://adamridovics.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-medium text-blue-600"
+          >
+            Adam Ridovics</a
+          >.
+        </span>
+      </p>
+    </footer>
   </body>
 </html>

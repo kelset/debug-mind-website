@@ -1,0 +1,10 @@
+[build]
+  command = "node predeploy.js"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
