@@ -10,7 +10,7 @@
 </a>
 
 Welcome to the website of my [debug:mind series](https://www.youtube.com/playlist?list=PLiD6R_aXkpLiMfS2YrhSgtSj09JJCaP2y) 🎙️🧠
-
+s
 This website showcase 3 main things:
 
 - the list of debug mind episodes
