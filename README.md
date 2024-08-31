@@ -21,6 +21,7 @@ This website showcase 3 main things:
 
 - Content & illustrations (ASCII Illustrations & text) are separated into smaller html files in the `./partials` folder.
 - the youtube episodes info are all stored in the `youtube-content.json` file
+  - the shorts are ordered from the newest to the oldest
 - Partials and Youtube content are added into the index.html by running `node predeploy.js` via `netlify.toml` on every push.
 
 ## Contributing
