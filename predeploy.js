@@ -166,7 +166,7 @@ const buildIndex = () => {
 
   // Insert shorts content for desktop
   let newShortsContentDesktop = "";
-  youtubeContent.shorts.forEach((short) => {
+  youtubeContent.shorts.slice(0, 5).forEach((short) => {
     if (short.title && short.video_id) {
       newShortsContentDesktop += `
         <article class="shorts flex flex-col text-base leading-7 text-gray-900 w-full max-w-[200px]">
