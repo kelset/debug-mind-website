@@ -1,6 +1,12 @@
 {
   "long_form_videos": [
     {
+      "title": "Being a Manager in Tech is HARDER Than You Think | with Aleksandar Andelkovic | debug:mind 10",
+      "length": "44:02",
+      "video_id": "-FwjEHWP9-I",
+      "upload_date": "26-09-2024"
+    },
+    {
       "title": "The RIGHT Way of Dealing With Anxiety | with Andrei Zgîrvaci | debug:mind 09",
       "length": "48:58",
       "video_id": "UU4cUuUBzA8",
@@ -62,6 +68,34 @@
     }
   ],
   "shorts": [
+    {
+      "title": "The Lack of Empathy in Tech",
+      "video_id": "9ATNAWlHioE"
+    },
+    {
+      "title": "Impostor Syndrome Impacts Women Harder",
+      "video_id": "HBv1EdGGeXs"
+    },
+    {
+      "title": "One of the Worst Impostor Syndrome Types: the EXPERT",
+      "video_id": "lZEeA99XbKU"
+    },
+    {
+      "title": "You CAN Start Contributing to Open Source",
+      "video_id": "hTIpyblZnck"
+    },
+    {
+      "title": "Saying Thank You To Open Source Maintainers",
+      "video_id": "3pVDTYWdTIk"
+    },
+    {
+      "title": "SOME Users in Open Source Are a Liability",
+      "video_id": "O2P_Z7K2MH4"
+    },
+    {
+      "title": "The KEY idea of Open Source Licenses",
+      "video_id": "wDjlro0zw80"
+    },
     {
       "title": "Achieving Work/Life Balance With Boundaries",
       "video_id": "kmWYcKq2iqo"
