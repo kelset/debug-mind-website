@@ -1,6 +1,12 @@
 {
   "long_form_videos": [
     {
+      "title": " Overcoming Loneliness and Navigating Friendships as an Expat | with Emad Ghorbaninia | debug:mind 11 ",
+      "length": "40:13",
+      "video_id": "VC6fow8pwEA",
+      "upload_date": "10-10-2024"
+    },
+    {
       "title": "Being a Manager in Tech is HARDER Than You Think | with Aleksandar Andelkovic | debug:mind 10",
       "length": "44:02",
       "video_id": "-FwjEHWP9-I",
@@ -68,6 +74,18 @@
     }
   ],
   "shorts": [
+    {
+      "title": "Fixing Your Sleep",
+      "video_id": "fdm5fSOMKVQ"
+    },
+    {
+      "title": "How To Start a New Habit",
+      "video_id": "mry9dkKVaWI"
+    },
+    {
+      "title": "The Open Culture of Tech Can Help with Impostor Syndrome",
+      "video_id": "SxtITrGcChM"
+    },
     {
       "title": "The Lack of Empathy in Tech",
       "video_id": "9ATNAWlHioE"
