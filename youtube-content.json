@@ -1,7 +1,13 @@
 {
   "long_form_videos": [
     {
-      "title": " Overcoming Loneliness and Navigating Friendships as an Expat | with Emad Ghorbaninia | debug:mind 11 ",
+      "title": "Rethinking Autism and Neurodiversity in Tech | with Alex Karp | debug:mind 12",
+      "length": "49:08",
+      "video_id": "baxhvk_Gt8U",
+      "upload_date": "22-11-2024"
+    },
+    {
+      "title": "Overcoming Loneliness and Navigating Friendships as an Expat | with Emad Ghorbaninia | debug:mind 11",
       "length": "40:13",
       "video_id": "VC6fow8pwEA",
       "upload_date": "10-10-2024"
@@ -74,6 +80,58 @@
     }
   ],
   "shorts": [
+    {
+      "title": "human connections will make you feel alive again #mentalhealthtech",
+      "video_id": "zCd0uBBBEQg"
+    },
+    {
+      "title": "respect your connections and have no expectations #mentalhealthtech",
+      "video_id": "0Bdbmc0pzck"
+    },
+    {
+      "title": "try sending this message #mentalhealthtech",
+      "video_id": "fh1fouAciho"
+    },
+    {
+      "title": "tech communities can turn into friendships #mentalhealthtech",
+      "video_id": "XBR3GUEm6k8"
+    },
+    {
+      "title": "surveys show how widespread burnout is #mentalhealthtech",
+      "video_id": "A7hYfj_ra1c"
+    },
+    {
+      "title": "empathy is the key skill for an engineering manager #mentalhealthtech",
+      "video_id": "vKSphb-DlHI"
+    },
+    {
+      "title": "if you are struggling, talk with your manager #mentalhealthtech",
+      "video_id": "GrQqtKQdXeA"
+    },
+    {
+      "title": "You Can't Go Back to Before Anxiety",
+      "video_id": "uIl0aIUxFp0"
+    },
+    {
+      "title": "Constantly Talking About Your Problems Doesn't Help",
+      "video_id": "H674prZUmSs"
+    },
+    {
+      "title": "Cut Things That Are Not Working",
+      "video_id": "EKakxig1KEE"
+    },
+    {
+      "title": "Be Present",
+      "video_id": "LPmvd7eQ6tA"
+    },
+    {
+      "title": "If You Are Struggling, TALK WITH SOMEONE",
+      "video_id": "z6IE7psZ9B4"
+    },
+    {
+      "title": "Everyone Is Dealing With Something",
+      "video_id": "JHLJ0HehO94"
+    },
     {
       "title": "Fixing Your Sleep",
       "video_id": "fdm5fSOMKVQ"
@@ -157,10 +215,6 @@
     {
       "title": "Take Care Of Yourself To Take Care Of Others",
       "video_id": "mmw8Q7jRuAw"
-    },
-    {
-      "title": "",
-      "video_id": ""
     }
   ]
 }
